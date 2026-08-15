@@ -1307,6 +1307,47 @@
   .newsletter-modal-card h3{font-size:20px}
   .newsletter-modal-card p{font-size:12px}
 }
+</style><style data-v33-home="true">
+/* ==========================================================
+   V33 hero categories + ticket alignment
+   ========================================================== */
+
+/* A subtle research treatment — distinct, but intentionally not promotional. */
+.category.category-methodology{
+  position:relative;
+  background:linear-gradient(135deg,#f8fbfd 0%,#f1f7fa 100%);
+  border-color:#bfd1de;
+  box-shadow:inset 3px 0 0 #91afc3;
+}
+.category.category-methodology:hover{
+  border-color:#8faec3;
+  box-shadow:inset 3px 0 0 #789db6,0 8px 22px rgba(36,79,117,.07);
+}
+.category.category-methodology .cat-icon{
+  background:#dfeaf1;
+  color:#315f7e;
+}
+.category.category-methodology small{
+  color:#6f8798;
+}
+
+/* Remove the old local transform from the flex wrappers. Applying the
+   same transform directly to both destination names guarantees identical
+   text angle regardless of alignment or text width. */
+.ticket-route-stop{
+  transform:none!important;
+}
+.ticket-route-origin strong,
+.ticket-route-destination strong{
+  display:inline-block!important;
+  line-height:1!important;
+  transform:rotate(-0.35deg)!important;
+  transform-origin:center bottom!important;
+}
+.ticket-route-origin small,
+.ticket-route-destination small{
+  line-height:1.15!important;
+}
 </style></head>
 <body>
 <header class="header">
@@ -1323,12 +1364,7 @@
 <div class="eyebrow">Comptes bancaires en Europe</div>
 <h1>Trouvez un compte qui vous correspond.</h1>
 <p>Comparez les frais, les offres actuelles et les conditions d’usage au quotidien.</p>
-<div class="category-grid">
-<a class="category" href="#accounts"><span class="cat-icon">→</span><span><strong>Compte personnel</strong><small>Banque au quotidien</small></span></a>
-<a class="category" href="#accounts"><span class="cat-icon">→</span><span><strong>Compte 18–26</strong><small>Tarifs jeunes</small></span></a>
-<a class="category" href="#accounts"><span class="cat-icon">→</span><span><strong>Compte 26+</strong><small>Tarifs standards</small></span></a>
-<a class="category" href="#save"><span class="cat-icon">→</span><span><strong>Compte professionnel</strong><small>Indépendants &amp; sociétés</small></span></a>
-</div>
+<div class="category-grid"><a class="category" href="/bank-accounts/"><span class="cat-icon">→</span><span><strong>Compte personnel</strong><small>Banque au quotidien</small></span></a><a class="category" href="/business-accounts/"><span class="cat-icon">→</span><span><strong>Compte professionnel</strong><small>Indépendants &amp; sociétés</small></span></a><a class="category" href="/savings/"><span class="cat-icon">→</span><span><strong>Épargne</strong><small>Comparer les produits d’épargne</small></span></a><a class="category category-methodology" href="/methodology/"><span class="cat-icon">◎</span><span><strong>Méthodologie</strong><small>Comment nous construisons les classements</small></span></a></div>
 </div>
 <div aria-label="European bank accounts" class="cards-scene">
 <div class="debit-card c1"><div class="dc-top"><span>PERSONAL</span><span>•••</span></div><img alt="ING" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=ing.com&amp;sz=256\'" src="/assets/real-logos/ing-full.webp"/><div class="dc-bottom"><span>Europe</span><strong>ING</strong></div></div>
@@ -1342,7 +1378,7 @@
 <section class="didyouknow-section" id="accounts">
 <div class="container didyouknow-grid">
 <div class="didyouknow-copy">
-<div class="story-kicker">LE SAVIEZ-VOUS ? · OFFRE DU MOMENT</div>
+<div class="story-kicker">MEILLEURE OFFRE · PROMOTION EN COURS</div>
 <h2>Un compte bancaire peut actuellement inclure un voyage pour deux.</h2>
 <p>BBVA Espagne offre à ses nouveaux clients de 18 à 29 ans un vol aller-retour pour deux après l’ouverture du Compte Jeune avec le code promo et un achat de 25 € par carte dans le premier mois.</p>
 <div class="story-deadline">Ouverture du compte jusqu’au 2 sept. 2026</div>
