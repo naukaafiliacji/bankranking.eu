@@ -136,19 +136,6 @@
    const idx=rr.indexOf(x);
    return {index:idx<0?rr.findIndex(y=>y.provider===x.provider&&y.product===x.product):idx,total:rr.length,rows:rr};
  }
- function qualitativeAssessment(x){
-   const p=researchPosition(x),i=Math.max(0,p.index),n=Math.max(1,p.total);
-   if(i===0)return {label:'Leading',cls:'leading',copy:'top research group'};
-   if(n<=4){
-     if(i===1)return {label:'Very strong',cls:'very-strong',copy:'very strong relative result'};
-     return {label:'Strong',cls:'strong',copy:'strong relative result'};
-   }
-   const q=i/(n-1);
-   if(q<=.25)return {label:'Very strong',cls:'very-strong',copy:'very strong relative result'};
-   if(q<=.55)return {label:'Strong',cls:'strong',copy:'strong relative result'};
-   if(q<=.80)return {label:'Competitive',cls:'competitive',copy:'competitive relative result'};
-   return {label:'Narrower fit',cls:'narrower',copy:'more selective fit under this model'};
- }
  function methodFactors(){
    return String(cats[cat].method||'').split(' · ').map(s=>s.trim()).filter(Boolean);
  }
@@ -167,30 +154,6 @@
  }
  function analysisId(x,i){
    return 'analysis-'+String(x.provider||'provider').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'-'+i;
- }
- function researchSummary(r){
-   let el=document.getElementById('research-summary');
-   if(!el){
-     el=document.createElement('div');
-     el.id='research-summary';
-     el.className='research-summary';
-     list.parentNode.insertBefore(el,list);
-   }
-   const total=rawRows().length;
-   const factors=methodFactors();
-   const personal=g==='banking'&&cat==='personal';
-   const segment=personal?(age==='young'?'18–26':'26+'):(g==='investing'?(mode==='bank'?'Banks & bank groups':'Specialist market'):cats[cat].label);
-   el.innerHTML=`<div class="research-summary-top">
-      <div><span class="research-kicker">RESEARCH SUMMARY</span><strong>${esc(m.country)} · ${esc(cats[cat].title)}</strong></div>
-      <a href="/methodology/">How the ranking works ↗</a>
-    </div>
-    <div class="research-summary-stats">
-      <span><b>${total}</b> providers in research set</span>
-      <span><b>${factors.length}</b> weighted factors</span>
-      <span><b>${esc(D.updatedDisplay||D.updated||'Current')}</b> research snapshot</span>
-      <span><b>${esc(segment)}</b> comparison segment</span>
-    </div>
-    <p>Qualitative assessments describe relative performance under the current weighted category model. They are not universal quality scores and do not replace a check of the provider's current terms.</p>`;
  }
 
  function render(){
@@ -215,7 +178,6 @@
      : r.length+' matching providers'+ageText+'. Use the filters to compare the ranking, listed fees and welcome offers.';
 
    method.textContent='Weighted model: '+(cats[cat].method||('Comparison factors: '+(focusMap[cat]||'costs · access · product terms · usability')));
-   researchSummary(r);
 
    if(!r.length){
      list.innerHTML='<div class="no-filter-results"><strong>No matching accounts.</strong><span>Change or reset the filters to see more providers.</span></div>';
@@ -223,7 +185,6 @@
    }
 
    list.innerHTML=r.map((x,i)=>{
-     const qa=qualitativeAssessment(x);
      const pos=researchPosition(x);
      const rankIndex=Math.max(0,pos.index);
      const above=rankIndex>0?pos.rows[rankIndex-1]:null;
@@ -240,7 +201,7 @@
          <div><strong>${esc(x.provider)}</strong><small>${esc(x.product)}</small></div>
        </div>
        <div class="best">
-         <div class="best-head"><strong>Best for</strong><span class="qual-badge ${qa.cls}">${qa.label}</span></div>
+         <strong>Best for</strong>
          <span>${esc(x.bestFor)}</span>
        </div>
        <div class="metric"><label>Key point</label><strong>${esc(x.metric1)}</strong></div>
@@ -251,8 +212,8 @@
        </div>
        <div class="rank-analysis-panel" id="${aid}">
          <div class="analysis-intro">
-           <div><span class="analysis-eyebrow">RESEARCH ASSESSMENT</span><h3>${qa.label}</h3></div>
-           <p>${esc(x.provider)} falls into the <strong>${qa.label.toLowerCase()}</strong> qualitative group under the current research model. The classification reflects its relative position in this category and segment, without presenting a pseudo-precise numerical score.</p>
+           <div><span class="analysis-eyebrow">RESEARCH ANALYSIS</span><h3>Why this position</h3></div>
+           <p>This analysis explains the main evidence behind <strong>${esc(x.provider)}</strong>'s current place in the ranking. The position is based on the weighted category factors and segment assumptions shown below, without converting the result into a numerical or qualitative grade.</p>
          </div>
          <div class="analysis-grid">
            <section><span class="analysis-label">Why it ranks here</span><p>The current comparison record identifies <strong>${esc(x.bestFor)}</strong> as the clearest use case. It also flags <strong>${esc(x.metric1)}</strong> and <strong>${esc(x.metric2)}</strong> as relevant product details in this comparison.</p></section>
