@@ -195,17 +195,24 @@
        : `${esc(x.provider)} sits below ${esc(above?above.provider:'the provider above it')} in the current weighted model. This means the combined result is lower under these category assumptions — not that the higher-ranked provider is universally better for every customer.`;
      const evidenceLabel=sourceType(x);
      return `<div class="rank-row">
-       <div class="rank-no ${i<3?'top':''}">${i+1}</div>
        <div class="provider-cell">
          <img class="provider-logo" src="${esc(lg(x))}" onerror="this.onerror=null;this.src='${favicon(x.domain)}'" alt="${esc(x.provider)}">
-         <div><strong>${esc(x.provider)}</strong><small>${esc(x.product)}</small></div>
+         <div class="provider-copy"><strong>${esc(x.provider)}</strong><small>${esc(x.product)}</small></div>
        </div>
-       <div class="best">
-         <strong>Best for</strong>
-         <span>${esc(x.bestFor)}</span>
+       <div class="card-metrics">
+         <div class="metric-card metric-card-best">
+           <label>Best for</label>
+           <strong>${esc(x.bestFor)}</strong>
+         </div>
+         <div class="metric-card">
+           <label>Key point</label>
+           <strong>${esc(x.metric1)}</strong>
+         </div>
+         <div class="metric-card">
+           <label>Also</label>
+           <strong>${esc(x.metric2)}</strong>
+         </div>
        </div>
-       <div class="metric"><label>Key point</label><strong>${esc(x.metric1)}</strong></div>
-       <div class="metric"><label>Also</label><strong>${esc(x.metric2)}</strong></div>
        <div class="rank-cta">
          <a href="${esc(providerUrl(x))}" target="_blank" rel="noopener">${ctaLabel()} <span>↗</span></a>
          <button type="button" class="analysis-toggle" data-analysis-toggle aria-expanded="false" aria-controls="${aid}">View analysis ↓</button>
