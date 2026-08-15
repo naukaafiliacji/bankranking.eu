@@ -1307,6 +1307,47 @@
   .newsletter-modal-card h3{font-size:20px}
   .newsletter-modal-card p{font-size:12px}
 }
+</style><style data-v33-home="true">
+/* ==========================================================
+   V33 hero categories + ticket alignment
+   ========================================================== */
+
+/* A subtle research treatment — distinct, but intentionally not promotional. */
+.category.category-methodology{
+  position:relative;
+  background:linear-gradient(135deg,#f8fbfd 0%,#f1f7fa 100%);
+  border-color:#bfd1de;
+  box-shadow:inset 3px 0 0 #91afc3;
+}
+.category.category-methodology:hover{
+  border-color:#8faec3;
+  box-shadow:inset 3px 0 0 #789db6,0 8px 22px rgba(36,79,117,.07);
+}
+.category.category-methodology .cat-icon{
+  background:#dfeaf1;
+  color:#315f7e;
+}
+.category.category-methodology small{
+  color:#6f8798;
+}
+
+/* Remove the old local transform from the flex wrappers. Applying the
+   same transform directly to both destination names guarantees identical
+   text angle regardless of alignment or text width. */
+.ticket-route-stop{
+  transform:none!important;
+}
+.ticket-route-origin strong,
+.ticket-route-destination strong{
+  display:inline-block!important;
+  line-height:1!important;
+  transform:rotate(-0.35deg)!important;
+  transform-origin:center bottom!important;
+}
+.ticket-route-origin small,
+.ticket-route-destination small{
+  line-height:1.15!important;
+}
 </style></head>
 <body>
 <header class="header">
@@ -1323,12 +1364,7 @@
 <div class="eyebrow">Bank accounts across Europe</div>
 <h1>Find an account that fits you.</h1>
 <p>Compare fees, current offers and everyday account conditions.</p>
-<div class="category-grid">
-<a class="category" href="#accounts"><span class="cat-icon">→</span><span><strong>Personal account</strong><small>Everyday banking</small></span></a>
-<a class="category" href="#accounts"><span class="cat-icon">→</span><span><strong>18–26 account</strong><small>Youth pricing</small></span></a>
-<a class="category" href="#accounts"><span class="cat-icon">→</span><span><strong>26+ account</strong><small>Standard pricing</small></span></a>
-<a class="category" href="#save"><span class="cat-icon">→</span><span><strong>Business account</strong><small>Sole traders &amp; companies</small></span></a>
-</div>
+<div class="category-grid"><a class="category" href="/bank-accounts/"><span class="cat-icon">→</span><span><strong>Personal account</strong><small>Everyday banking</small></span></a><a class="category" href="/business-accounts/"><span class="cat-icon">→</span><span><strong>Business account</strong><small>Sole traders &amp; companies</small></span></a><a class="category" href="/savings/"><span class="cat-icon">→</span><span><strong>Savings</strong><small>Compare savings products</small></span></a><a class="category category-methodology" href="/methodology/"><span class="cat-icon">◎</span><span><strong>Methodology</strong><small>How we build rankings</small></span></a></div>
 </div>
 <div aria-label="European bank accounts" class="cards-scene">
 <div class="debit-card c1"><div class="dc-top"><span>PERSONAL</span><span>•••</span></div><img alt="ING" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=ing.com&amp;sz=256\'" src="/assets/real-logos/ing-full.webp"/><div class="dc-bottom"><span>Europe</span><strong>ING</strong></div></div>
@@ -1342,7 +1378,7 @@
 <section class="didyouknow-section" id="accounts">
 <div class="container didyouknow-grid">
 <div class="didyouknow-copy">
-<div class="story-kicker">DID YOU KNOW? · FEATURED LIVE PROMOTION</div>
+<div class="story-kicker">BEST FEATURED · LIVE PROMOTION</div>
 <h2>A bank account can currently come with a trip for two.</h2>
 <p>BBVA Spain is offering new customers aged 18–29 a return flight for two after opening its Young Account with the promo code and making one €25 card purchase within a month.</p>
 <div class="story-deadline">Offer available to open until 2 Sep 2026</div>
