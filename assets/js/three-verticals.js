@@ -1,7 +1,15 @@
 
 (function(){
+ // V36_DATA_GUARD: fail visibly instead of leaving an empty ranking if the data asset is unavailable.
  const D=window.BANKRANKING_MULTI;
  const b=document.body;
+ if(!D || !D.markets){
+   const list=document.getElementById('rank-list');
+   const title=document.getElementById('ranking-title');
+   if(title) title.textContent='Ranking data could not be loaded';
+   if(list) list.innerHTML='<div class="no-filter-results"><strong>Ranking data is temporarily unavailable.</strong><span>Please refresh the page. If the problem persists, the data asset did not load.</span></div>';
+   return;
+ }
  const m=D.markets[b.dataset.market];
  const g=b.dataset.group;
  const cats=D.categories;

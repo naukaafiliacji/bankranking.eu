@@ -19,7 +19,7 @@ Important:
 - no USA
 - no mortgage / loans / insurance categories
 - no Google Translate popup
-- CNAME remains bankowezestawienie.pl
+- CNAME remains bankranking.eu
 - homepage styles are embedded directly in index.html so the page does not collapse into unstyled text if an old CSS asset is cached incorrectly.
 
 ## Homepage editorial promotion feature
