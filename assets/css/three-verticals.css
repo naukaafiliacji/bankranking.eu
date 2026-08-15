@@ -1151,3 +1151,102 @@
   .ranking-workspace{margin-bottom:28px!important}
   .category-wrap{padding-bottom:26px!important}
 }
+
+
+/* ============================================================
+   V38 — research-rich rankings, qualitative assessments only
+   ============================================================ */
+.research-summary{
+  margin:0 0 16px;
+  padding:17px 18px 15px;
+  border:1px solid #dce6ee;
+  border-radius:12px;
+  background:#f8fbfd;
+}
+.research-summary-top{
+  display:flex;align-items:flex-start;justify-content:space-between;gap:18px;
+}
+.research-summary-top>div{min-width:0}
+.research-kicker{
+  display:block;margin-bottom:4px;font-size:8px;font-weight:900;letter-spacing:.12em;color:#8da0ae;
+}
+.research-summary-top strong{display:block;font-size:15px;color:#244b69;letter-spacing:-.015em}
+.research-summary-top>a{font-size:9px;font-weight:850;color:#2f679f;white-space:nowrap}
+.research-summary-stats{
+  display:flex;gap:7px;flex-wrap:wrap;margin-top:13px;
+}
+.research-summary-stats span{
+  display:inline-flex;align-items:center;gap:4px;padding:6px 8px;border:1px solid #dbe5ec;
+  border-radius:999px;background:#fff;color:#6a8092;font-size:9px;line-height:1;
+}
+.research-summary-stats b{color:#345a76;font-weight:900}
+.research-summary p{margin:11px 0 0;color:#7a8e9e;font-size:9px;line-height:1.55}
+
+.best-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.best-head>strong{margin:0!important}
+.qual-badge{
+  display:inline-flex;align-items:center;justify-content:center;min-height:20px;padding:4px 7px;
+  border-radius:999px;border:1px solid #d5e1e9;background:#f8fafb;color:#667f91;
+  font-size:8px;font-weight:900;line-height:1;white-space:nowrap;
+}
+.qual-badge.leading{background:#eef7f3;border-color:#c8e1d6;color:#2f7058}
+.qual-badge.very-strong{background:#eef5fb;border-color:#cbddea;color:#356985}
+.qual-badge.strong{background:#f3f6fa;border-color:#d6e0e8;color:#526f84}
+.qual-badge.competitive{background:#faf7ef;border-color:#e7dcc3;color:#7c6a3d}
+.qual-badge.narrower{background:#faf6f4;border-color:#eadbd4;color:#80665a}
+
+.rank-cta{display:flex!important;flex-direction:column!important;align-items:flex-end!important;gap:7px!important}
+.analysis-toggle{
+  border:0;background:transparent;padding:2px 0;color:#436f91;font-size:9px;font-weight:850;
+  cursor:pointer;white-space:nowrap;
+}
+.analysis-toggle:hover{text-decoration:underline}
+
+.rank-analysis-panel{
+  display:none;grid-column:1/-1;margin:4px -4px -5px;padding:19px 4px 1px;border-top:1px solid #e6edf2;
+}
+.rank-row.analysis-open .rank-analysis-panel{display:block}
+.rank-row.analysis-open{box-shadow:0 8px 24px rgba(31,61,85,.055)!important}
+.analysis-intro{
+  display:grid;grid-template-columns:180px minmax(0,1fr);gap:22px;align-items:start;margin-bottom:17px;
+}
+.analysis-eyebrow,.analysis-label{
+  display:block;font-size:8px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:#92a2ae;
+}
+.analysis-intro h3{margin:4px 0 0;font-size:23px;line-height:1;color:#244b69;letter-spacing:-.035em}
+.analysis-intro p{margin:0;color:#60788b;font-size:11px;line-height:1.65}
+.analysis-intro p strong{color:#365a74}
+.analysis-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px;
+}
+.analysis-grid section{
+  min-width:0;padding:13px 14px;border:1px solid #e1e9ef;border-radius:9px;background:#fbfdfe;
+}
+.analysis-grid p{margin:7px 0 0;color:#60798c;font-size:10px;line-height:1.6}
+.analysis-grid p strong{color:#365a74}
+.analysis-factors,.analysis-evidence{padding-top:12px;border-top:1px solid #edf2f5;margin-top:12px}
+.analysis-factors>div,.analysis-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.analysis-factors>div>span{
+  display:inline-flex;padding:6px 8px;border-radius:999px;border:1px solid #dbe5ec;background:#fff;
+  color:#597286;font-size:8px;font-weight:800;
+}
+.analysis-links a{
+  display:inline-flex;padding:6px 8px;border-radius:6px;border:1px solid #d9e4eb;background:#fff;
+  color:#2f679f;font-size:8px;font-weight:850;
+}
+
+@media(max-width:980px){
+  .research-summary-top{display:block}
+  .research-summary-top>a{display:inline-block;margin-top:8px}
+  .rank-cta{align-items:flex-end!important}
+  .analysis-intro{grid-template-columns:150px minmax(0,1fr)}
+}
+@media(max-width:700px){
+  .research-summary{padding:14px 13px}
+  .research-summary-stats{gap:5px}
+  .research-summary-stats span{font-size:8px}
+  .rank-cta{align-items:flex-start!important}
+  .analysis-intro{grid-template-columns:1fr;gap:8px}
+  .analysis-grid{grid-template-columns:1fr}
+  .rank-analysis-panel{margin-top:2px;padding-top:16px}
+}
