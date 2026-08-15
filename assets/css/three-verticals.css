@@ -1583,3 +1583,29 @@
   .rank-cta{flex-direction:column!important;align-items:stretch!important}
   .rank-cta a,.analysis-toggle{min-width:0!important;width:100%!important}
 }
+
+
+/* ==========================================================
+   V41 — dominant Open account, lighter View analysis, no clipping
+   ========================================================== */
+.rank-row{grid-template-columns:minmax(0,1fr) 184px!important;gap:18px 28px!important;overflow:visible!important}
+.rank-cta{grid-column:2!important;grid-row:1 / span 2!important;display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:flex-end!important;gap:9px!important;min-width:184px!important;padding-right:4px!important}
+.rank-cta a{width:154px!important;min-width:154px!important;max-width:154px!important;min-height:44px!important;padding:0 16px!important;border-radius:12px!important;font-size:12px!important;font-weight:800!important;box-shadow:0 2px 0 rgba(0,0,0,.03)!important}
+.analysis-toggle{display:inline-flex!important;align-items:center!important;justify-content:flex-end!important;width:auto!important;min-width:0!important;max-width:none!important;min-height:0!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;color:#5b7890!important;font-size:11px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:0!important;text-decoration:none!important;box-shadow:none!important}
+.analysis-toggle:hover{background:transparent!important;border:0!important;color:#173d61!important;text-decoration:underline!important}
+.rank-row.analysis-open .analysis-toggle{color:#173d61!important}
+@media(max-width:1180px){
+  .rank-row{grid-template-columns:minmax(0,1fr) 172px!important;gap:16px 22px!important}
+  .rank-cta{min-width:172px!important;padding-right:0!important}
+  .rank-cta a{width:148px!important;min-width:148px!important;max-width:148px!important}
+}
+@media(max-width:980px){
+  .rank-cta{grid-row:auto!important;align-items:flex-start!important;min-width:0!important}
+  .rank-cta a{width:auto!important;min-width:160px!important;max-width:none!important}
+  .analysis-toggle{justify-content:flex-start!important}
+}
+@media(max-width:560px){
+  .rank-cta{align-items:stretch!important}
+  .rank-cta a{width:100%!important;min-width:0!important}
+  .analysis-toggle{justify-content:flex-start!important}
+}
