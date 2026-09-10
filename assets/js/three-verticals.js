@@ -169,7 +169,7 @@
    const r=filteredRows();
    if(filterCount)filterCount.textContent=r.length;
 
-   title.textContent=cats[cat].title+' in '+m.country;
+   title.textContent=b.dataset.rankingTitle||(cats[cat].title+' in '+m.country);
    let ageText=personal?(age==='young'?' · age 18–26':' · age 26+'):'';
    sub.textContent=inv
      ? (mode==='bank'
@@ -214,7 +214,7 @@
          </div>
        </div>
        <div class="rank-cta">
-         <a href="${esc(providerUrl(x))}" target="_blank" rel="noopener">${ctaLabel()} <span>↗</span></a>
+         <a href="${esc(x.affiliateUrl||providerUrl(x))}" target="_blank" rel="${x.affiliateUrl?'sponsored nofollow noopener':'noopener'}">${ctaLabel()} <span>↗</span></a>
          <button type="button" class="analysis-toggle" data-analysis-toggle aria-expanded="false" aria-controls="${aid}">View analysis ↓</button>
        </div>
        <div class="rank-analysis-panel" id="${aid}">
@@ -236,6 +236,7 @@
  }
 
  bs.forEach(x=>x.addEventListener('click',()=>{
+   if(!x.dataset.cat)return;
    cat=x.dataset.cat;
    mode='bank';
    if(search)search.value='';
