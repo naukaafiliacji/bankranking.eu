@@ -2,9 +2,10 @@
 
 <html lang="en"><head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Bank accounts in Poland — BankRanking Europe</title>
-<meta content="Personal, business, joint, student, youth and children's accounts. Rankings for Poland." name="description"/>
-<link href="/favicon.svg" rel="icon" type="image/svg+xml"/><link href="../../assets/css/three-verticals.css?v=41" rel="stylesheet"/>
+<title>Best bank accounts — September 2026 | BankRanking Europe</title>
+<link rel="canonical" href="https://bankranking.eu/pl/banking/best-september-2026/"/>
+<meta content="Best bank accounts for September 2026: Bank Pekao, VeloBank, BNP Paribas, Erste Bank Polska and Credit Agricole." name="description"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/assets/css/three-verticals.css?v=41" rel="stylesheet"/>
 <style>:root{--accent:#173f66;--accent-soft:#eef6fd}</style>
 <style data-v19-critical="true">
 /* V19 CACHE-PROOF COUNTRY PICKER */
@@ -130,7 +131,7 @@
   .monthly-tab small{display:none!important}
 }
 </style>
-</head><body data-categories='["personal", "business", "joint", "student", "youth", "child"]' data-group="banking" data-market="pl">
+</head><body data-categories='["personal"]' data-group="banking" data-market="pl">
 <header class="header"><div class="container header-row">
 <a class="brand" href="/"><img alt="" src="/assets/brand/mark.svg"/><span>BankRanking</span><em>Europe</em></a>
 <details class="country-picker">
@@ -143,7 +144,7 @@
 </div></header>
 <section class="vertical-hero"><div class="container">
 <div class="vertical-breadcrumb"><a href="/pl/banking/">Poland</a> / Bank accounts</div>
-<div class="vertical-hero-top"><div><h1>Bank accounts in Poland</h1><p>Personal, business, joint, student, youth and children's accounts.</p></div>
+<div class="vertical-hero-top"><div><h1>Best bank accounts — September 2026</h1><p>Bank Pekao, VeloBank, BNP Paribas, Erste Bank Polska and Credit Agricole.</p></div>
 <div class="updated"><strong>Research snapshot</strong>13 August 2026</div></div>
 </div></section>
 
@@ -157,7 +158,7 @@
 
 <div class="filter-section monthly-tab-section">
 <div class="filter-label">Featured</div>
-<a class="monthly-tab" href="/pl/banking/best-september-2026/">
+<a class="monthly-tab active" aria-current="page" href="/pl/banking/best-september-2026/">
 Best · September 2026
 <small>5 selected offers</small>
 </a>
@@ -165,12 +166,12 @@ Best · September 2026
 <div class="filter-section">
 <div class="filter-label">Account type</div>
 <div class="category-tabs">
-<button class="cat-btn" data-cat="personal">Personal</button>
-<button class="cat-btn" data-cat="business">Business</button>
-<button class="cat-btn" data-cat="joint">Joint</button>
-<button class="cat-btn" data-cat="student">Student</button>
-<button class="cat-btn" data-cat="youth">Youth</button>
-<button class="cat-btn" data-cat="child">Children</button>
+<a class="cat-btn" href="/pl/banking/?cat=personal">Personal</a>
+<a class="cat-btn" href="/pl/banking/?cat=business">Business</a>
+<a class="cat-btn" href="/pl/banking/?cat=joint">Joint</a>
+<a class="cat-btn" href="/pl/banking/?cat=student">Student</a>
+<a class="cat-btn" href="/pl/banking/?cat=youth">Youth</a>
+<a class="cat-btn" href="/pl/banking/?cat=child">Children</a>
 </div>
 </div>
 <div class="filter-section age-filter" id="age-filter">
@@ -206,14 +207,31 @@ Best · September 2026
 </aside>
 <main class="ranking-main">
 <div class="container">
-<div class="rank-heading"><div><h2 id="ranking-title"></h2><p id="ranking-sub"></p></div><div class="method" id="ranking-method"></div></div>
+<div class="rank-heading"><div><p id="ranking-sub"></p></div><div class="method" id="ranking-method"></div></div>
 <div class="rank-list" id="rank-list"></div>
-<div class="note"><strong>Editorial ranking, not financial advice.</strong> This is a major-provider shortlist, not an exhaustive register of every licensed bank. Product terms, eligibility, rates and fees can change; investment products can fall in value.</div>
+<div class="note">Account-opening links are affiliate links. BankRanking may earn a commission if you take up an offer.<br/><strong>Editorial ranking, not financial advice.</strong> This is a major-provider shortlist, not an exhaustive register of every licensed bank. Product terms, eligibility, rates and fees can change; investment products can fall in value.</div>
 </div>
 </main>
 </div>
 <footer class="footer"><div class="container">
 <div class="footer-row"><p>BankRanking provides information and comparisons. We are not a bank, financial institution or investment adviser.<br/><span class="footer-operator">Operated by Dropshipping How To Ascend P.S.A. · <a href="mailto:contact@bankranking.eu">contact@bankranking.eu</a></span></p><div><a href="/research-sources/">Research sources</a> · <a href="/disclaimer/">Disclaimer</a> · <a href="/methodology/">Methodology</a></div></div>
 </div></footer>
-<script src="../../assets/js/multi-ranking-data.js?v=36"></script><script src="../../assets/js/three-verticals.js?v=41"></script>
+<script src="/assets/js/multi-ranking-data.js?v=36"></script><script>
+// Reuse the standard ranking records and renderer for this monthly shortlist.
+(function () {
+  const data = window.BANKRANKING_MULTI;
+  if (!data || !data.markets || !data.markets.pl) return;
+  const links = {
+  "Bank Pekao": "https://prostodo.pl/c?zid=37000925404&tid=2637&ha=823325921&r=5580",
+  "VeloBank": "https://prostodo.pl/c?zid=22931161145&tid=5545&ha=3804407327&r=1618",
+  "BNP Paribas Bank Polska": "https://tmlead.pl/redirect/851212_383",
+  "Erste Bank Polska": "https://tmlead.pl/redirect/851212_3077",
+  "Credit Agricole Bank Polska": "https://tmlead.pl/redirect/851212_2395"
+};
+  data.markets.pl.rankings.personal = data.markets.pl.rankings.personal
+    .filter(row => Object.prototype.hasOwnProperty.call(links, row.provider))
+    .map(row => ({ ...row, affiliateUrl: links[row.provider] }));
+})();
+</script>
+<script src="/assets/js/three-verticals.js?v=43"></script>
 </body></html>
