@@ -1,0 +1,19 @@
+BankRanking SEO V2 — 2026-09-20
+
+Implemented:
+- Added full Polish language hub under /polski/ with localized category pages.
+- Added 30 long-tail SEO guides: 10 Polish, 10 Spanish, 10 Italian.
+- Added About / Editorial Standards pages in EN, PL, ES and IT.
+- Added internal-link guide blocks to EN/ES/IT homepages and Polish homepage.
+- Added Polish hreflang to localized page groups.
+- Added canonical, Open Graph, Twitter and structured data to new pages.
+- Added BreadcrumbList structured data broadly across HTML pages.
+- Added lazy-loading/async decoding to non-primary images where missing.
+- Regenerated sitemap.xml from canonical indexable pages (152 URLs).
+- robots.txt points to the sitemap.
+- Package contains only Poland/Spain/Italy market directories; old country directories are not included.
+
+Off-site backlinks cannot be created inside a website ZIP. The new guides, research/transparency pages and editorial standards are intended to make the site more linkable and trustworthy.
+Additional polish in this build:
+- Localized /pl/banking/, /pl/saving/, /pl/investing/ and the September 2026 Poland ranking into Polish (metadata, H1s, filters and key dynamic UI strings).
+- Validation: 0 broken internal links, 0 missing canonical targets, 0 missing hreflang targets, 0 missing sitemap targets.

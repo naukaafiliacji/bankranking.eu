@@ -3,11 +3,13 @@
  // V36_DATA_GUARD: fail visibly instead of leaving an empty ranking if the data asset is unavailable.
  const D=window.BANKRANKING_MULTI;
  const b=document.body;
+ const isPL=b.dataset.market==='pl';
+ const plCat={personal:'Konta osobiste',business:'Konta firmowe',joint:'Konta wspólne',student:'Konta studenckie',youth:'Konta dla młodych',child:'Konta dla dzieci',savings:'Konta oszczędnościowe',deposits:'Lokaty terminowe',business_savings:'Oszczędności firmowe',child_savings:'Oszczędności dla dzieci',investment:'Rachunki inwestycyjne',funds:'Fundusze',managed:'Zarządzane inwestowanie',self_directed:'Samodzielne inwestowanie',retirement:'Inwestowanie emerytalne',business_investing:'Inwestowanie dla firm'};
  if(!D || !D.markets){
    const list=document.getElementById('rank-list');
    const title=document.getElementById('ranking-title');
-   if(title) title.textContent='Ranking data could not be loaded';
-   if(list) list.innerHTML='<div class="no-filter-results"><strong>Ranking data is temporarily unavailable.</strong><span>Please refresh the page. If the problem persists, the data asset did not load.</span></div>';
+   if(title) title.textContent=isPL?'Nie udało się wczytać danych rankingu':'Ranking data could not be loaded';
+   if(list) list.innerHTML=isPL?'<div class="no-filter-results"><strong>Dane rankingu są chwilowo niedostępne.</strong><span>Odśwież stronę. Jeśli problem się powtarza, plik danych nie został wczytany.</span></div>':'<div class="no-filter-results"><strong>Ranking data is temporarily unavailable.</strong><span>Please refresh the page. If the problem persists, the data asset did not load.</span></div>';
    return;
  }
  const m=D.markets[b.dataset.market];
@@ -123,9 +125,9 @@
  };
 
  function ctaLabel(){
-   if(g==='banking')return 'Open account';
-   if(g==='saving')return 'View product';
-   return 'View provider';
+   if(g==='banking')return isPL?'Otwórz konto':'Open account';
+   if(g==='saving')return isPL?'Zobacz produkt':'View product';
+   return isPL?'Zobacz dostawcę':'View provider';
  }
 
  function researchOrder(){
@@ -140,17 +142,17 @@
    return String(cats[cat].method||'').split(' · ').map(s=>s.trim()).filter(Boolean);
  }
  function verifyCopy(){
-   if(g==='banking')return 'Check the full fee-waiver rules, card and ATM pricing, eligibility requirements and any promotional conditions directly with the provider before applying.';
-   if(g==='saving')return 'Check the current rate period, balance caps, access or withdrawal rules, eligibility and the applicable deposit-protection framework before placing money.';
-   return 'Check the complete fee schedule, instrument availability, custody and FX charges, account eligibility and the relevant tax treatment before investing.';
+   if(g==='banking')return isPL?'Przed złożeniem wniosku sprawdź u dostawcy pełne warunki zwolnienia z opłat, ceny karty i bankomatów, wymagania oraz zasady promocji.':'Check the full fee-waiver rules, card and ATM pricing, eligibility requirements and any promotional conditions directly with the provider before applying.';
+   if(g==='saving')return isPL?'Przed wpłatą środków sprawdź okres oprocentowania, limity salda, zasady wypłat, wymagania oraz właściwy system ochrony depozytów.':'Check the current rate period, balance caps, access or withdrawal rules, eligibility and the applicable deposit-protection framework before placing money.';
+   return isPL?'Przed inwestowaniem sprawdź pełną tabelę opłat, dostępność instrumentów, koszty przechowywania i walut, wymagania oraz właściwe zasady podatkowe.':'Check the complete fee schedule, instrument availability, custody and FX charges, account eligibility and the relevant tax treatment before investing.';
  }
  function sourceType(x){
    if(!x.source)return '';
    try{
      const a=new URL(x.source,location.href), b=new URL(providerUrl(x),location.href);
      const ah=a.hostname.replace(/^www\./,''), bh=b.hostname.replace(/^www\./,'');
-     return (ah===bh||ah.endsWith('.'+bh)||bh.endsWith('.'+ah))?'Primary provider source':'Research / coverage source';
-   }catch(e){return 'Research source'}
+     return (ah===bh||ah.endsWith('.'+bh)||bh.endsWith('.'+ah))?(isPL?'Oficjalne źródło dostawcy':'Primary provider source'):(isPL?'Źródło badawcze / informacyjne':'Research / coverage source');
+   }catch(e){return isPL?'Źródło badawcze':'Research source'}
  }
  function analysisId(x,i){
    return 'analysis-'+String(x.provider||'provider').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'-'+i;
@@ -169,18 +171,20 @@
    const r=filteredRows();
    if(filterCount)filterCount.textContent=r.length;
 
-   if(title)title.textContent=b.dataset.rankingTitle||(cats[cat].title+' in '+m.country);
+   if(title)title.textContent=b.dataset.rankingTitle||(isPL?((plCat[cat]||cats[cat].title)+' w Polsce'):(cats[cat].title+' in '+m.country));
    let ageText=personal?(age==='young'?' · age 18–26':' · age 26+'):'';
-   sub.textContent=inv
-     ? (mode==='bank'
-       ? r.length+' bank / bank-group providers shown. Switch to Specialist market for non-bank investment platforms.'
-       : r.length+' specialist providers shown. Availability and tax treatment can differ by country.')
-     : r.length+' matching providers'+ageText+'. Use the filters to compare the ranking, listed fees and welcome offers.';
+   sub.textContent=isPL
+     ? (inv ? (mode==='bank' ? r.length+' banków lub grup bankowych. Przełącz na dostawców specjalistycznych, aby zobaczyć platformy pozabankowe.' : r.length+' dostawców specjalistycznych. Dostępność i zasady podatkowe mogą się różnić.') : r.length+' pasujących dostawców'+ageText+'. Użyj filtrów, aby porównać ranking, wskazane opłaty i oferty specjalne.')
+     : (inv
+       ? (mode==='bank'
+         ? r.length+' bank / bank-group providers shown. Switch to Specialist market for non-bank investment platforms.'
+         : r.length+' specialist providers shown. Availability and tax treatment can differ by country.')
+       : r.length+' matching providers'+ageText+'. Use the filters to compare the ranking, listed fees and welcome offers.');
 
-   method.textContent='Weighted model: '+(cats[cat].method||('Comparison factors: '+(focusMap[cat]||'costs · access · product terms · usability')));
+   method.textContent=(isPL?'Model ważony: ':'Weighted model: ')+(cats[cat].method||((isPL?'Kryteria: ':'Comparison factors: ')+(focusMap[cat]||'costs · access · product terms · usability')));
 
    if(!r.length){
-     list.innerHTML='<div class="no-filter-results"><strong>No matching accounts.</strong><span>Change or reset the filters to see more providers.</span></div>';
+     list.innerHTML=isPL?'<div class="no-filter-results"><strong>Brak pasujących ofert.</strong><span>Zmień lub wyczyść filtry, aby zobaczyć więcej dostawców.</span></div>':'<div class="no-filter-results"><strong>No matching accounts.</strong><span>Change or reset the filters to see more providers.</span></div>';
      return;
    }
 
@@ -201,35 +205,35 @@
        </div>
        <div class="card-metrics">
          <div class="metric-card metric-card-best">
-           <label>Best for</label>
+           <label>${isPL?'Najlepsze dla':'Best for'}</label>
            <strong>${esc(x.bestFor)}</strong>
          </div>
          <div class="metric-card">
-           <label>Key point</label>
+           <label>${isPL?'Kluczowa cecha':'Key point'}</label>
            <strong>${esc(x.metric1)}</strong>
          </div>
          <div class="metric-card">
-           <label>Also</label>
+           <label>${isPL?'Dodatkowo':'Also'}</label>
            <strong>${esc(x.metric2)}</strong>
          </div>
        </div>
        <div class="rank-cta">
          <a href="${esc(x.affiliateUrl||providerUrl(x))}" target="_blank" rel="${x.affiliateUrl?'sponsored nofollow noopener':'noopener'}">${ctaLabel()} <span>↗</span></a>
-         <button type="button" class="analysis-toggle" data-analysis-toggle aria-expanded="false" aria-controls="${aid}">View analysis ↓</button>
+         <button type="button" class="analysis-toggle" data-analysis-toggle aria-expanded="false" aria-controls="${aid}">${isPL?'Zobacz analizę ↓':'View analysis ↓'}</button>
        </div>
        <div class="rank-analysis-panel" id="${aid}">
          <div class="analysis-intro">
-           <div><span class="analysis-eyebrow">RESEARCH ANALYSIS</span><h3>Why this position</h3></div>
+           <div><span class="analysis-eyebrow">${isPL?'ANALIZA BADAWCZA':'RESEARCH ANALYSIS'}</span><h3>${isPL?'Dlaczego ta pozycja':'Why this position'}</h3></div>
            <p>This analysis explains the main evidence behind <strong>${esc(x.provider)}</strong>'s current place in the ranking. The position is based on the weighted category factors and segment assumptions shown below, without converting the result into a numerical or qualitative grade.</p>
          </div>
          <div class="analysis-grid">
-           <section><span class="analysis-label">Why it ranks here</span><p>The current comparison record identifies <strong>${esc(x.bestFor)}</strong> as the clearest use case. It also flags <strong>${esc(x.metric1)}</strong> and <strong>${esc(x.metric2)}</strong> as relevant product details in this comparison.</p></section>
-           <section><span class="analysis-label">Position context</span><p>${positionCopy}</p></section>
-           <section><span class="analysis-label">What to verify</span><p>${verifyCopy()}</p></section>
-           <section><span class="analysis-label">Research record</span><p>Research snapshot: <strong>${esc(D.updatedDisplay||D.updated||'Current')}</strong>. Category: <strong>${esc(cats[cat].title)}</strong>${g==='banking'&&cat==='personal'?` · Segment: <strong>${age==='young'?'18–26':'26+'}</strong>`:''}.</p></section>
+           <section><span class="analysis-label">${isPL?'Dlaczego jest na tej pozycji':'Why it ranks here'}</span><p>The current comparison record identifies <strong>${esc(x.bestFor)}</strong> as the clearest use case. It also flags <strong>${esc(x.metric1)}</strong> and <strong>${esc(x.metric2)}</strong> as relevant product details in this comparison.</p></section>
+           <section><span class="analysis-label">${isPL?'Kontekst pozycji':'Position context'}</span><p>${positionCopy}</p></section>
+           <section><span class="analysis-label">${isPL?'Co sprawdzić':'What to verify'}</span><p>${verifyCopy()}</p></section>
+           <section><span class="analysis-label">${isPL?'Dane badawcze':'Research record'}</span><p>Research snapshot: <strong>${esc(D.updatedDisplay||D.updated||'Current')}</strong>. Category: <strong>${esc(cats[cat].title)}</strong>${g==='banking'&&cat==='personal'?` · Segment: <strong>${age==='young'?'18–26':'26+'}</strong>`:''}.</p></section>
          </div>
-         <div class="analysis-factors"><span class="analysis-label">Weighted factors used for every provider in this ranking</span><div>${factors.map(f=>`<span>${esc(f)}</span>`).join('')}</div></div>
-         <div class="analysis-evidence"><span class="analysis-label">Evidence & documentation</span><div class="analysis-links"><a href="${esc(providerUrl(x))}" target="_blank" rel="noopener">Provider page ↗</a>${x.source?`<a href="${esc(x.source)}" target="_blank" rel="noopener">${esc(evidenceLabel)} ↗</a>`:''}<a href="/methodology/">Methodology ↗</a><a href="/research/">Research framework ↗</a></div></div>
+         <div class="analysis-factors"><span class="analysis-label">${isPL?'Ważone kryteria stosowane do każdego dostawcy':'Weighted factors used for every provider in this ranking'}</span><div>${factors.map(f=>`<span>${esc(f)}</span>`).join('')}</div></div>
+         <div class="analysis-evidence"><span class="analysis-label">${isPL?'Źródła i dokumentacja':'Evidence & documentation'}</span><div class="analysis-links"><a href="${esc(providerUrl(x))}" target="_blank" rel="noopener">${isPL?'Strona dostawcy ↗':'Provider page ↗'}</a>${x.source?`<a href="${esc(x.source)}" target="_blank" rel="noopener">${esc(evidenceLabel)} ↗</a>`:''}<a href="/methodology/">${isPL?'Metodologia ↗':'Methodology ↗'}</a><a href="/research/">${isPL?'Ramy badawcze ↗':'Research framework ↗'}</a></div></div>
        </div>
      </div>`;
    }).join('');
@@ -269,7 +273,7 @@
    const open=!row.classList.contains('analysis-open');
    row.classList.toggle('analysis-open',open);
    btn.setAttribute('aria-expanded',String(open));
-   btn.textContent=open?'Hide analysis ↑':'View analysis ↓';
+   btn.textContent=open?(isPL?'Ukryj analizę ↑':'Hide analysis ↑'):(isPL?'Zobacz analizę ↓':'View analysis ↓');
  });
 
  render();
