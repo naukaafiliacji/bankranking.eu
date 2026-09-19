@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bankranking.eu/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/about/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/accessibility/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/bank-accounts/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/brokers/</loc><lastmod>2026-09-20</lastmod></url>
@@ -10,6 +11,7 @@
   <url><loc>https://bankranking.eu/child-account/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/child-savings/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/contact/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/cookie-settings/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/cookies/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/cooperation/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/disclaimer/</loc><lastmod>2026-09-20</lastmod></url>
@@ -25,6 +27,15 @@
   <url><loc>https://bankranking.eu/espanol/child-account/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/child-savings/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/contact/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/espanol/cuenta-con-bonificacion/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/espanol/cuenta-conjunta/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/espanol/cuenta-para-autonomos/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/espanol/cuenta-para-estudiantes/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/espanol/cuenta-para-extranjeros/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/espanol/cuenta-para-jovenes/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/espanol/cuenta-para-viajar/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/espanol/cuenta-sin-comisiones/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/espanol/cuenta-sin-nomina/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/disclaimer/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/fixed-term-deposits/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/fund-investing/</loc><lastmod>2026-09-20</lastmod></url>
@@ -32,12 +43,14 @@
   <url><loc>https://bankranking.eu/espanol/investment-accounts/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/joint-account/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/managed-investing/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/espanol/mejores-cuentas-bancarias/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/research/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/retirement-investing/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/savings-rates/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/savings/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/self-directed-investing/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/services/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/espanol/sobre-nosotros/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/student-account/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/espanol/youth-account/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/fixed-term-deposits/</loc><lastmod>2026-09-20</lastmod></url>
@@ -53,9 +66,19 @@
   <url><loc>https://bankranking.eu/italiano/business-accounts/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/italiano/business-investing/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/italiano/business-savings/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/italiano/chi-siamo/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/italiano/child-account/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/italiano/child-savings/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/italiano/contact/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/italiano/conto-cointestato/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/italiano/conto-con-bonus/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/italiano/conto-per-giovani/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/italiano/conto-per-partita-iva/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/italiano/conto-per-stranieri/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/italiano/conto-per-studenti/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/italiano/conto-per-viaggiare/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/italiano/conto-senza-accredito-stipendio/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/italiano/conto-senza-canone/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/italiano/disclaimer/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/italiano/fixed-term-deposits/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/italiano/fund-investing/</loc><lastmod>2026-09-20</lastmod></url>
@@ -63,6 +86,7 @@
   <url><loc>https://bankranking.eu/italiano/investment-accounts/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/italiano/joint-account/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/italiano/managed-investing/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/italiano/migliori-conti-correnti/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/italiano/research/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/italiano/retirement-investing/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/italiano/savings-rates/</loc><lastmod>2026-09-20</lastmod></url>
@@ -75,10 +99,47 @@
   <url><loc>https://bankranking.eu/logo-notice/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/managed-investing/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/methodology/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/newsletter/check-your-inbox/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/newsletter/confirmed/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/pl/banking/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/pl/banking/best-september-2026/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/pl/investing/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/pl/saving/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/bank-accounts/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/brokers/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/business-accounts/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/business-investing/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/business-savings/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/child-account/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/child-savings/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/contact/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/disclaimer/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/fixed-term-deposits/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/fund-investing/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/investing/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/investment-accounts/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/joint-account/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/konto-bez-oplat/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/konto-bez-wplywow/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/konto-dla-mlodych/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/konto-dla-obcokrajowca/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/konto-dla-studenta/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/konto-do-podrozy/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/konto-firmowe/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/konto-wspolne/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/konto-z-bonusem/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/managed-investing/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/najlepsze-konto-bankowe/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/o-nas/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/research/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/retirement-investing/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/savings-rates/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/savings/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/self-directed-investing/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/services/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/student-account/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://bankranking.eu/polski/youth-account/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/privacy/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/ranking-policy/</loc><lastmod>2026-09-20</lastmod></url>
   <url><loc>https://bankranking.eu/research-sources/</loc><lastmod>2026-09-20</lastmod></url>
