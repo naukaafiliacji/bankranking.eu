@@ -1,0 +1,8 @@
+BankRanking update — 19 Sep 2026
+- Added Italian language version under /italiano/ (homepage + localized route structure).
+- Replaced expired BBVA flight section with current September savings feature.
+- Refreshed homepage Insights with September 2026 items.
+- Added robust favicon set: SVG, ICO, 32x32 PNG, Apple touch icon; referenced across all HTML pages.
+- Sitemap rebuilt from existing routes and includes Italian pages.
+- Deleted-market navigation references remain limited to Poland, Italy and Spain.
+- .git directory intentionally excluded from this package to avoid interfering with your existing GitHub repository.
