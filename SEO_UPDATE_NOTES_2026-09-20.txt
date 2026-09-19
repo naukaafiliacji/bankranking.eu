@@ -1,0 +1,20 @@
+BankRanking SEO upgrade — 2026-09-20
+
+Implemented:
+- Unique SEO titles and meta descriptions across indexable pages.
+- Homepage H1s rewritten around the actual markets: Poland, Spain and Italy.
+- English / Spanish / Italian category pages now have unique localized copy instead of duplicated English templates.
+- Category pages expanded with useful comparison criteria and updated market wording.
+- Canonical URLs added/normalized.
+- hreflang clusters added for EN / ES / IT homepages and matching localized category/information pages.
+- html lang corrected for localized pages.
+- Open Graph + Twitter metadata added to indexable pages.
+- Basic WebPage / WebSite / Organization JSON-LD added.
+- Country ranking pages strengthened with targeted titles, descriptions, H1s and static explanatory copy.
+- September Poland ranking now explicitly targets Poland in title/H1.
+- Redirect/utility pages set to noindex,follow.
+- Sitemap regenerated from canonical, indexable pages only; redirects removed.
+- robots.txt keeps the sitemap declaration.
+- No meta keywords tag added: major search engines do not use it for ranking.
+
+Deployment: upload the CONTENTS of this bankranking.eu folder to the repository root, keeping sitemap.xml next to index.html.

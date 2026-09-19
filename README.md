@@ -62,7 +62,7 @@ Homepage now includes a bank.nl-inspired knowledge/newsroom section:
 - Saving: savings, fixed-term deposits, business savings, child savings.
 - Investing: investment account, funds, managed, self-directed, retirement, business investing.
 - Investing defaults to Banks & bank groups; Specialist / non-bank market is a separate toggle.
-- Former footer placeholders are now category hubs linking to the 8 live country rankings.
+- Former footer placeholders are now category hubs linking to the 3 live country rankings: Poland, Italy and Spain.
 - /research-sources/ documents the research-source directory.
 - Research snapshot: 13 August 2026.
 
@@ -71,19 +71,15 @@ Homepage now includes a bank.nl-inspired knowledge/newsroom section:
 Each country is now split into /banking/, /saving/, and /investing/. The old /COUNTRY/ page is a simple 3-card hub. /COUNTRY/banks/ redirects to /COUNTRY/banking/. Ranking typography and spacing were enlarged.
 
 
-## V17 — EU27 + UK major-bank coverage
-Updated 13 August 2026.
+## V17 — current market scope
+Updated 20 September 2026.
 
-- Expanded from 8 to 28 country markets: all 27 EU member states + United Kingdom.
-- Featured homepage markets remain the original 8; the other 20 EU states are under an expandable “See other EU countries” directory.
-- Every country links directly to /COUNTRY/banking/.
-- Created/updated 84 Banking / Saving / Investing vertical pages.
-- Expanded Personal rankings to major retail-bank shortlists (typically 6–13 providers depending on market concentration).
-- Expanded Business / Joint / Student / Youth / Child / Savings / Deposit rankings beyond the previous 3-provider model.
-- Investment rankings retain Banks & bank groups as the default and Specialist market as the second view.
-- Country navigation is now a compact dropdown rather than attempting to show 28 markets in one horizontal header.
-- Clearbit dependency removed from ranking logos; existing verified full logos are used where available, otherwise official-domain favicons.
-- Research source directory updated for all markets.
+- Current public market coverage is limited to Poland, Italy and Spain.
+- Each market has Banking / Saving / Investing verticals.
+- Country navigation and ranking data are restricted to these three markets.
+- Personal, business, joint, student, youth, child, savings and investment category hubs link only to the current market pages.
+- Investment rankings retain Banks & bank groups as the default and Specialist market as the second view where available.
+- Research-source and methodology pages document the comparison approach and evidence hierarchy.
 
 
 ## V32 — Research methodology 2.0
