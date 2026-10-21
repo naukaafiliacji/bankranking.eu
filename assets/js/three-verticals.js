@@ -1,93 +1,37 @@
 (function(){
- 'use strict';
- const D=window.BANKRANKING_MULTI,b=document.body,isPL=b.dataset.market==='pl';
- const list=document.getElementById('rank-list'),title=document.getElementById('ranking-title');
- const plCat={personal:'Konta osobiste',business:'Konta firmowe',joint:'Konta wspólne',student:'Konta studenckie',youth:'Konta dla młodych',child:'Konta dla dzieci',savings:'Konta oszczędnościowe',deposits:'Lokaty terminowe',business_savings:'Oszczędności firmowe',child_savings:'Oszczędności dla dzieci',investment:'Rachunki inwestycyjne',funds:'Fundusze',managed:'Zarządzane inwestowanie',self_directed:'Samodzielne inwestowanie',retirement:'Inwestowanie emerytalne',business_investing:'Inwestowanie dla firm'};
- function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
- if(!D?.markets?.[b.dataset.market]||!list){
-  if(title)title.textContent=isPL?'Nie udało się wczytać zestawienia':'Reference list could not be loaded';
-  if(list)list.innerHTML='<div class="no-filter-results"><strong>'+(isPL?'Dane zestawienia są chwilowo niedostępne.':'Reference data is temporarily unavailable.')+'</strong><span>'+(isPL?'Odśwież stronę lub wróć do wyboru rynku.':'Refresh the page or return to the market selection.')+'</span></div>';
-  return;
- }
- const m=D.markets[b.dataset.market],g=b.dataset.group,cats=D.categories;
- let allowed;try{allowed=JSON.parse(b.dataset.categories);}catch(e){allowed=['personal'];}
- const params=new URLSearchParams(location.search);
- let cat=allowed.includes(params.get('cat'))?params.get('cat'):allowed[0],mode='bank';
- const bs=[...document.querySelectorAll('.cat-btn')],pbs=[...document.querySelectorAll('.provider-btn')],pw=document.querySelector('.provider-toggle');
- const sub=document.getElementById('ranking-sub'),method=document.getElementById('ranking-method');
- const ageWrap=document.getElementById('age-filter'),search=document.getElementById('bank-search'),sort=document.getElementById('ranking-sort');
- const promoOnly=document.getElementById('promo-only'),freeOnly=document.getElementById('free-only'),reset=document.getElementById('reset-filters'),filterCount=document.getElementById('filter-count');
- const referenceDate='2026-08-13';
- // These legacy records do not contain verified, age-specific tariffs. Do not imply an age adjustment.
- if(ageWrap)ageWrap.hidden=true;
- function favicon(d){return 'https://www.google.com/s2/favicons?domain='+encodeURIComponent(d)+'&sz=256';}
- function providerUrl(x){return x.providerUrl||('https://'+x.domain);}
- function rawRows(){const d=m.rankings[cat];return g==='investing'?((d&&d[mode])||[]):(Array.isArray(d)?d:[]);}
- function parseAmount(raw){
-  let s=String(raw).replace(/[\s\u00a0\u202f']/g,'');
-  if(s.includes(',')&&s.includes('.')){if(s.lastIndexOf(',')>s.lastIndexOf('.'))s=s.replace(/\./g,'').replace(',','.');else s=s.replace(/,/g,'');}
-  else if(s.includes(','))s=/^\d{1,3}(,\d{3})+$/.test(s)?s.replace(/,/g,''):s.replace(',','.');
-  else if(/^\d{1,3}(\.\d{3})+$/.test(s))s=s.replace(/\./g,'');
-  const n=Number(s);return Number.isFinite(n)&&n>=0?n:null;
- }
- const currency='(?:EUR|PLN|GBP|SEK|CZK|DKK|RON|HUF|CHF|€|£|zł)';
- const amount='(\\d[\\d.,\\s\\u00a0\\u202f]*)';
- function moneyValues(text){
-  const re=new RegExp(currency+'\\s*'+amount+'|'+amount+'\\s*'+currency,'gi'),result=[];
-  for(const match of String(text||'').matchAll(re)){const n=parseAmount(match[1]??match[2]);if(n!==null)result.push(n);}
-  return result;
- }
- function bonusValue(x){
-  if(typeof x.bonusAmount==='number'&&Number.isFinite(x.bonusAmount))return x.bonusAmount;
-  const values=moneyValues(x.metric2);return values.length?Math.max(...values):-1;
- }
- function feeValue(x){
-  if(x.feeWaiverRequired===true)return Infinity;
-  if(typeof x.monthlyFee==='number'&&Number.isFinite(x.monthlyFee)&&x.monthlyFee>=0)return x.monthlyFee;
-  const text=String(x.metric1||'').trim();
-  // Only a standalone monthly currency amount is interpretable here. Conditions, ranges and prose stay unknown.
-  if(/[\*]|conditional|warunk|under|waiv|od |from|hasta|up to|do \d/i.test(text))return Infinity;
-  const re=new RegExp('^\\s*(?:'+currency+'\\s*'+amount+'|'+amount+'\\s*'+currency+')(?:\\s*(?:\\/\\s*)?(?:month|monthly|mies\\.?|miesięcznie))?\\s*$','i');
-  const match=text.match(re);if(!match)return Infinity;
-  const n=parseAmount(match[1]??match[2]);return n===null?Infinity:n;
- }
- function byName(a,b){return String(a.provider).localeCompare(String(b.provider),isPL?'pl':'en');}
- function filteredRows(){
-  let rows=[...rawRows()];const q=(search?.value||'').trim().toLowerCase();
-  if(q)rows=rows.filter(x=>(String(x.provider)+' '+String(x.product)).toLowerCase().includes(q));
-  if(promoOnly?.checked)rows=rows.filter(x=>bonusValue(x)>0);
-  if(freeOnly?.checked)rows=rows.filter(x=>feeValue(x)===0);
-  const order=sort?.value||'recommended';
-  return rows.sort((a,b)=>{if(order==='bonus'){const d=bonusValue(b)-bonusValue(a);if(d)return d;}if(order==='fee'){const av=feeValue(a),bv=feeValue(b);if(av!==bv)return av-bv;}return byName(a,b);});
- }
- function recordDate(x){return /^\d{4}-\d{2}-\d{2}$/.test(x.verifiedAt||'')?x.verifiedAt:referenceDate;}
- function dateLabel(s){return new Intl.DateTimeFormat(isPL?'pl-PL':'en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(s+'T12:00:00Z'));}
- function updateURL(){const u=new URL(location.href);u.searchParams.set('cat',cat);u.searchParams.delete('age');history.replaceState(null,'',u);}
- function verifyCopy(){
-  if(g==='banking')return isPL?'Sprawdź u dostawcy aktualny produkt, taryfę, zwolnienia z opłat, kartę, bankomaty, wymagania i zasady promocji.':'Check the current product, tariff, fee waivers, card and ATM costs, eligibility and promotion terms with the provider.';
-  if(g==='saving')return isPL?'Sprawdź aktualne oprocentowanie, czas jego obowiązywania, limit salda, wypłaty i system ochrony depozytów.':'Check current interest rates, duration, balance caps, withdrawals and deposit protection.';
-  return isPL?'Sprawdź aktualne opłaty, instrumenty, dostępność usługi, ryzyko, zasady przechowywania aktywów i wymagania podatkowe.':'Check current fees, instruments, service availability, risks, custody and tax requirements.';
- }
- function sourceLabel(x){try{const a=new URL(x.source),c=new URL(providerUrl(x));return a.hostname.replace(/^www\./,'')===c.hostname.replace(/^www\./,'')?(isPL?'Dokumentacja dostawcy':'Provider documentation'):(isPL?'Źródło referencyjne':'Reference source');}catch(e){return isPL?'Źródło referencyjne':'Reference source';}}
- function render(){
-  bs.forEach(x=>x.classList.toggle('active',x.dataset.cat===cat));if(pw)pw.classList.toggle('visible',g==='investing');pbs.forEach(x=>x.classList.toggle('active',x.dataset.mode===mode));
-  const rows=filteredRows(),label=isPL?(plCat[cat]||cat):(cats[cat]?.title||cat);
-  if(filterCount)filterCount.textContent=rows.length;
-  if(title)title.textContent=b.dataset.rankingTitle||(isPL?label+' — zestawienie referencyjne':label+' — reference directory');
-  if(sub)sub.textContent=isPL?rows.length+' pasujących wpisów. Dane referencyjne z 13 sierpnia 2026 r.; nie potwierdzają aktualnych opłat, promocji ani dostępności.':rows.length+' matching records. Reference data from 13 August 2026; current fees, promotions and availability have not been revalidated.';
-  const order=sort?.value||'recommended';
-  if(method)method.textContent=isPL?('Kolejność: '+(order==='bonus'?'najwyższa kwota zapisana w danych':order==='fee'?'najniższa jednoznacznie zapisana opłata miesięczna':'alfabetyczna według dostawcy')+'. Brak danych nie oznacza zera. To lista referencyjna, bez oceny punktowej.'):
-   ('Order: '+(order==='bonus'?'highest amount recorded in the dataset':order==='fee'?'lowest unambiguously recorded monthly fee':'provider name, A–Z')+'. Missing data does not mean zero. This is a reference list without quality scores.');
-  if(!rows.length){list.innerHTML='<div class="no-filter-results"><strong>'+(isPL?'Brak pasujących wpisów.':'No matching records.')+'</strong><span>'+(isPL?'Wyczyść filtry. Niepełne dane mogą nie spełniać filtra opłaty lub korzyści.':'Reset the filters. Incomplete records may not satisfy a fee or benefit filter.')+'</span></div>';return;}
-  list.innerHTML=rows.map((x,i)=>{
-   const id='record-'+String(x.provider).toLowerCase().replace(/[^a-z0-9]+/g,'-')+'-'+i;
-   return '<div class="rank-row"><div class="provider-cell"><img class="provider-logo" src="'+esc(x.logo||x.logoFallback||favicon(x.domain))+'" alt="'+esc(x.provider)+'"><div class="provider-copy"><strong>'+esc(x.provider)+'</strong><small>'+esc(x.product||label)+'</small></div></div><div class="card-metrics"><div class="metric-card metric-card-best"><label>'+(isPL?'Opis archiwalny':'Historical description')+'</label><strong>'+esc(x.bestFor||'—')+'</strong></div><div class="metric-card"><label>'+(isPL?'Zapis danych':'Recorded detail')+'</label><strong>'+esc(x.metric1||'—')+'</strong></div><div class="metric-card"><label>'+(isPL?'Dodatkowa informacja':'Additional record')+'</label><strong>'+esc(x.metric2||'—')+'</strong></div></div><div class="rank-cta"><a href="'+esc(x.affiliateUrl||providerUrl(x))+'" target="_blank" rel="'+(x.affiliateUrl?'sponsored nofollow noopener':'noopener')+'">'+(isPL?'Sprawdź u dostawcy':'Check provider')+' <span>↗</span></a><button type="button" class="analysis-toggle" data-analysis-toggle aria-expanded="false" aria-controls="'+id+'">'+(isPL?'Szczegóły wpisu ↓':'Record details ↓')+'</button></div><div class="rank-analysis-panel" id="'+id+'"><div class="analysis-intro"><div><span class="analysis-eyebrow">'+(isPL?'ZAPIS REFERENCYJNY':'REFERENCE RECORD')+'</span><h3>'+esc(x.provider)+'</h3></div><p>'+(isPL?'Ten wpis zachowuje wcześniejszą informację o dostawcy. Nie jest bieżącą weryfikacją taryfy ani wyjaśnieniem jakości produktu.':'This record preserves earlier provider information. It is not a current tariff verification or a product-quality assessment.')+'</p></div><div class="analysis-grid"><section><span class="analysis-label">'+(isPL?'Produkt lub zakres wpisu':'Product or record scope')+'</span><p>'+esc(x.product||label)+'</p></section><section><span class="analysis-label">'+(isPL?'Data danych':'Record date')+'</span><p>'+esc(dateLabel(recordDate(x)))+'. '+(isPL?'Źródło może od tego czasu prezentować inne warunki.':'The linked source may have changed since then.')+'</p></section><section><span class="analysis-label">'+(isPL?'Co sprawdzić teraz':'What to check now')+'</span><p>'+verifyCopy()+'</p></section><section><span class="analysis-label">'+(isPL?'Jak używać zestawienia':'How to use this list')+'</span><p>'+(isPL?'Porównuj konkretne produkty dopiero po sprawdzeniu aktualnych dokumentów. Kolejność alfabetyczna i filtry zapisanych danych nie stanowią rekomendacji.':'Compare specific products after checking current documents. Alphabetical ordering and recorded-data filters are not recommendations.')+'</p></section></div><div class="analysis-evidence"><span class="analysis-label">'+(isPL?'Źródła i zasady':'Sources and policy')+'</span><div class="analysis-links"><a href="'+esc(providerUrl(x))+'" target="_blank" rel="noopener">'+(isPL?'Strona dostawcy ↗':'Provider website ↗')+'</a>'+(x.source?'<a href="'+esc(x.source)+'" target="_blank" rel="noopener">'+sourceLabel(x)+' ↗</a>':'')+'<a href="/methodology/">'+(isPL?'Metodologia ↗':'Methodology ↗')+'</a></div></div></div></div>';
-  }).join('');
- }
- bs.forEach(x=>x.addEventListener('click',()=>{if(!allowed.includes(x.dataset.cat))return;cat=x.dataset.cat;mode='bank';if(search)search.value='';if(promoOnly)promoOnly.checked=false;if(freeOnly)freeOnly.checked=false;if(sort)sort.value='recommended';updateURL();render();}));
- pbs.forEach(x=>x.addEventListener('click',()=>{mode=x.dataset.mode==='specialist'?'specialist':'bank';render();}));
- [search,sort,promoOnly,freeOnly].filter(Boolean).forEach(x=>x.addEventListener(x===search?'input':'change',render));
- if(reset)reset.addEventListener('click',()=>{if(search)search.value='';if(sort)sort.value='recommended';if(promoOnly)promoOnly.checked=false;if(freeOnly)freeOnly.checked=false;updateURL();render();});
- list.addEventListener('click',e=>{const button=e.target.closest('[data-analysis-toggle]');if(!button)return;const row=button.closest('.rank-row'),open=!row.classList.contains('analysis-open');row.classList.toggle('analysis-open',open);button.setAttribute('aria-expanded',String(open));button.textContent=open?(isPL?'Ukryj szczegóły ↑':'Hide details ↑'):(isPL?'Szczegóły wpisu ↓':'Record details ↓');});
- render();
+'use strict';
+const D=window.BANKRANKING_MULTI,F=window.BankRankingFees,b=document.body,m=b.dataset.market,g=b.dataset.group,list=document.getElementById('rank-list');if(!D?.markets?.[m]||!F||!list)return;
+const pl=m==='pl',es=m==='es',t=(a,c,e)=>pl?a:es?c:e,w=F.words[F.language(m)],categories=D.categories,ranking=D.markets[m].rankings;
+const allowed=JSON.parse(b.dataset.categories),params=new URLSearchParams(location.search);let cat=allowed.includes(params.get('cat'))?params.get('cat'):allowed[0],mode='bank',visible=[],selected=new Map();
+const get=id=>document.getElementById(id),search=get('bank-search'),sort=get('ranking-sort'),free=get('free-only'),promo=get('promo-only');
+if(get('age-filter'))get('age-filter').hidden=true;
+let age=null,payroll=null;
+if(es&&g==='banking'){
+ const block=document.createElement('div');block.className='filter-section';block.innerHTML='<label class="filter-label" for="fee-age">Edad (opcional)</label><input id="fee-age" type="number" min="18" max="110" placeholder="Cualquiera"><label class="filter-label" for="fee-payroll">Nómina obligatoria</label><select id="fee-payroll"><option value="all">Cualquier requisito</option><option value="no">Sin nómina</option><option value="yes">Con nómina</option></select><small>La edad filtra solo requisitos comprobados para cuentas personales.</small>';
+ get('ranking-sort').closest('.filter-section').after(block);age=get('fee-age');payroll=get('fee-payroll');
+}
+if(search&&params.get('bank'))search.value=params.get('bank');
+const today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+function raw(){const rows=ranking[cat];return Array.isArray(rows)?rows:rows?.[mode]||[]}
+function key(x){return x.id||x.provider+'|'+x.product}
+function render(){
+ if(get('fee-status'))get('fee-status').textContent='';
+ document.querySelectorAll('.cat-btn').forEach(x=>{x.classList.toggle('active',x.dataset.cat===cat);x.setAttribute('aria-pressed',String(x.dataset.cat===cat))});document.querySelector('.provider-toggle')?.classList.toggle('visible',g==='investing');document.querySelectorAll('.provider-btn').forEach(x=>x.classList.toggle('active',x.dataset.mode===mode));
+ const query=(search?.value||'').trim().toLocaleLowerCase();visible=raw().filter(x=>(!query||(x.provider+' '+x.product).toLocaleLowerCase().includes(query))&&(!free?.checked||(F.annual(x)===0&&x.costs?.conditional===false))&&(!promo?.checked||F.activeBonus(x,today())>0)&&(cat!=='personal'||!age?.value||(Number.isFinite(x.minAge)&&Number(age.value)>=x.minAge&&(!Number.isFinite(x.maxAge)||Number(age.value)<=x.maxAge)))&&(cat!=='personal'||!payroll||payroll.value==='all'||(payroll.value==='no'?x.payrollRequired===false:x.payrollRequired===true)));
+ visible.sort((a,c)=>{if(sort?.value==='fee'){const av=F.annual(a),cv=F.annual(c);if(av!==cv)return (av??Infinity)-(cv??Infinity)}if(sort?.value==='bonus'){const diff=F.activeBonus(c,today())-F.activeBonus(a,today());if(diff)return diff}return a.provider.localeCompare(c.provider,m)});
+ get('filter-count').textContent=visible.length;get('ranking-title').textContent=t('Porównaj koszty','Compara los costes','Compare running costs');
+ const checked=visible.filter(x=>x.costs?.checkedAt).length;get('ranking-sub').textContent=t(`${visible.length} ofert i wpisów · ${checked} z potwierdzonymi opłatami. Daty i źródła w szczegółach.`,`${visible.length} productos y entidades · ${checked} con comisiones comprobadas. Fechas y fuentes en cada ficha.`,`${visible.length} products and providers · ${checked} with checked fees. Dates and sources in each entry.`);
+ get('ranking-method').textContent=t('Koszt roczny = konto + wskazana karta przez 12 miesięcy. Kwoty „0 / X” zależą od warunków. Nie obejmuje operacji i podatków. Brak danych nie oznacza zera.','Coste anual = cuenta + tarjeta indicada durante 12 meses. «0 / X» depende de condiciones. Operaciones e impuestos aparte. Sin datos no significa 0 €.','Annual maintenance = account + indicated card for 12 months. “0 / X” depends on conditions. Transactions and taxes excluded. Missing data is not zero.');
+ list.innerHTML=visible.length?visible.map((x,i)=>F.card(x,m,g,today(),i,selected.has(key(x)))).join(''):'<p class="no-filter-results">'+t('Brak pasujących ofert. Zmień filtry.','Sin resultados. Cambia los filtros.','No matching results. Change the filters.')+'</p>';
+ renderCompare();
+}
+const comparison=document.createElement('section');comparison.className='fee-comparison';comparison.id='cost-comparison';list.after(comparison);
+function renderCompare(){const rows=[...selected.values()];comparison.hidden=!rows.length;if(!rows.length){comparison.innerHTML='';return}const title=t('Porównanie kosztów','Comparación de costes','Cost comparison');comparison.innerHTML='<h2>'+title+' ('+rows.length+'/3)</h2><button type="button" data-clear-compare>'+t('Wyczyść','Borrar','Clear selection')+'</button>'+(rows.length<2?'<p>'+t('Wybierz jeszcze jedną ofertę.','Selecciona otra cuenta.','Select one more product.')+'</p>':'<p>'+t('Przewiń tabelę, aby zobaczyć wszystkie kolumny.','Desliza la tabla para ver todas las columnas.','Scroll the table to see all columns.')+'</p><div class="fee-table-wrap" tabindex="0" role="region" aria-label="'+title+'"><table><caption>'+title+'</caption><thead><tr><th>'+w.product+'</th>'+rows.map(x=>'<th scope="col">'+F.esc(x.provider)+'<br>'+F.esc(x.product)+'</th>').join('')+'</tr></thead><tbody>'+F.facts(rows[0],m,g,today()).slice(0,8).map(([label],i)=>'<tr><th scope="row">'+F.esc(label)+'</th>'+rows.map(x=>'<td>'+F.esc(F.facts(x,m,g,today())[i]?.[1]||w.unknown)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>')}
+list.addEventListener('click',e=>{const btn=e.target.closest('[data-analysis-toggle]');if(!btn)return;const row=btn.closest('.rank-row'),panel=row.querySelector('.rank-analysis-panel'),open=btn.getAttribute('aria-expanded')!=='true';row.classList.toggle('analysis-open',open);panel.hidden=!open;btn.setAttribute('aria-expanded',String(open));btn.textContent=open?w.hide:w.show});
+list.addEventListener('change',e=>{if(!e.target.matches('[data-cost-compare]'))return;const x=visible[Number(e.target.dataset.costCompare)],k=key(x);if(e.target.checked&&selected.size>=3){e.target.checked=false;get('fee-status').textContent=t('Możesz wybrać maksymalnie trzy oferty.','Puedes seleccionar hasta tres cuentas.','Select up to three products.');return}e.target.checked?selected.set(k,x):selected.delete(k);get('fee-status').textContent=t('Wybrano: ','Seleccionadas: ','Selected: ')+selected.size;renderCompare()});
+comparison.addEventListener('click',e=>{if(e.target.closest('[data-clear-compare]')){selected.clear();render()}});
+document.querySelectorAll('.cat-btn').forEach(x=>x.addEventListener('click',()=>{cat=x.dataset.cat;mode='bank';selected.clear();if(search)search.value='';if(free)free.checked=false;if(promo)promo.checked=false;if(age)age.value='';if(payroll)payroll.value='all';const u=new URL(location.href);u.searchParams.set('cat',cat);u.searchParams.delete('age');history.replaceState(null,'',u);render()}));
+document.querySelectorAll('.provider-btn').forEach(x=>x.addEventListener('click',()=>{mode=x.dataset.mode;selected.clear();render()}));
+[search,sort,free,promo,age,payroll].filter(Boolean).forEach(x=>x.addEventListener(x===search?'input':'change',render));get('reset-filters')?.addEventListener('click',()=>{search.value='';sort.value='recommended';free.checked=false;promo.checked=false;if(age)age.value='';if(payroll)payroll.value='all';render()});
+const status=document.createElement('p');status.id='fee-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');list.before(status);render();let day=today();setInterval(()=>{if(day!==today()){day=today();render()}},60000);
 })();
