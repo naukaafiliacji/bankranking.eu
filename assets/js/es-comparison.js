@@ -30,7 +30,7 @@
   function render(){
     if(!personal)return;
     const rows=core.filterAccounts(accounts,getState(),core.todayMadrid());
-    resultCount.textContent=rows.length+' '+(rows.length===1?'cuenta':'cuentas')+' · sin clasificación por comisión de afiliación';
+    resultCount.textContent=rows.length+' '+(rows.length===1?'cuenta':'cuentas');
     list.innerHTML=rows.length?rows.map(a=>view.card(a,core.todayMadrid(),selected,true)).join(''):'<div class="no-results"><h3>No hay cuentas que coincidan con estos filtros.</h3><p>Prueba a cambiar la búsqueda o restablecer los filtros.</p><button type="button" class="secondary-button" data-reset>Restablecer filtros</button></div>';
     updateSelection();
   }

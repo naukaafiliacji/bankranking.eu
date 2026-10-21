@@ -40,3 +40,10 @@ Kod i dane przygotowano do publikacji; dostarczenie paczki nie oznacza jej autom
 - Edycja wiadomości: `assets/data/news.json`, następnie `node scripts/build-news.cjs`.
 - Kompaktowy wygląd porównania ES: `assets/css/es-refined.css`; logika i zweryfikowane źródła pozostają wspólne.
 - Wyróżniona oferta N26 na angielskiej stronie głównej jest informacją redakcyjną ze zwykłą taryfą. Aktualizując dane N26, zaktualizuj także ten blok w `index.html`.
+
+## Wersja PRO — 21 października
+
+- Nowe karty porównania ES: `assets/css/accounts-pro.css`; wspólny wygląd katalogów PL/IT: `assets/css/reference-pro.css`.
+- Prawdziwe lokalne logotypy w `assets/logos/verified/` i ich źródła w `sources.json`.
+- W danych `display` są krótkie opisy karty i bankomatów. Przy zmianie warunków zaktualizuj zarówno skróty, jak i pełne opisy.
+- Ustawienia zgód usunięto ze stopek; otwiera je dyskretna ikona prywatności w rogu, a także przycisk na stronie polityki cookies.

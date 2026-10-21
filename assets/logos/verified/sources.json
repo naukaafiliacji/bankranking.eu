@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-10-21",
+  "purpose": "Identification of providers in independent comparisons; no endorsement or partnership implied.",
+  "assets": [
+    {
+      "asset": "sabadell.svg",
+      "source": "https://www.bancsabadell.com/bsnacional/es/particulares/cuentas-bancarias/cuenta-online-sabadell/",
+      "method": "SVG embedded by the bank in its header structured data"
+    },
+    {
+      "asset": "n26.svg",
+      "source": "https://n26.com/es-es/cuenta-sin-comisiones",
+      "method": "SVG from official page header"
+    },
+    {
+      "asset": "revolut.svg",
+      "source": "https://developer.revolut.com/",
+      "method": "SVG wordmark from official developer site"
+    },
+    {
+      "asset": "bbva.svg",
+      "source": "https://www.bbva.es/content/dam/library/logos/logo-bbva.svg",
+      "method": "Official vector asset"
+    },
+    {
+      "asset": "openbank.svg",
+      "source": "https://www.openbank.es/assets/logo_topbar/Logo_Web_8_0.svg",
+      "method": "Official vector asset, dark lettering on light background"
+    },
+    {
+      "asset": "bankinter.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Bankinter.svg",
+      "download": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Bankinter.svg",
+      "method": "Vector logo credited to Bankinter; Commons marks it PD-textlogo. Trademark rights remain with owner."
+    },
+    {
+      "asset": "mbank.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Mbank_logo.svg",
+      "method": "Vector logo from Wikimedia Commons; PD mark recorded on source page. Trademark rights remain with owner."
+    },
+    {
+      "asset": "millennium.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Bank_Millenium.svg",
+      "method": "Vector logo from Wikimedia Commons; PD mark recorded on source page. Trademark rights remain with owner."
+    },
+    {
+      "asset": "credit-agricole.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Crédit_Agricole_logo_2017.svg",
+      "method": "Vector logo from Wikimedia Commons; PD mark recorded on source page. Trademark rights remain with owner."
+    },
+    {
+      "asset": "bnp-paribas.png",
+      "source": "https://www.bnpparibas.pl/_cms-img/time20260909160729/bnp/bnpparibas-logo.png",
+      "method": "Official bank asset"
+    },
+    {
+      "asset": "velobank.svg",
+      "source": "https://www.velobank.pl/themes/velobank/images/logo-velobank-emerald.svg",
+      "method": "Official bank asset"
+    }
+  ]
+}

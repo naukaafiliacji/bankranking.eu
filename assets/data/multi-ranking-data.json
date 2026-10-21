@@ -174,7 +174,8 @@
             "providerUrl": "https://revolut.com",
             "source": "https://www.erste.pl/przedtem-santander-bank-polska",
             "scoreYoung": 9.36,
-            "scoreAdult": 9.28
+            "scoreAdult": 9.28,
+            "logo": "/assets/logos/verified/revolut.svg"
           },
           {
             "provider": "Bank Millennium",
@@ -186,7 +187,7 @@
             "score": 9.15,
             "scoreYoung": 9.23,
             "scoreAdult": 9.15,
-            "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bank%20Millenium.svg",
+            "logo": "/assets/logos/verified/millennium.svg",
             "logoFallback": "https://www.google.com/s2/favicons?domain=bankmillennium.pl&sz=256",
             "providerUrl": "https://www.bankmillennium.pl/klienci-indywidualni/konta-osobiste/konto-millennium-360",
             "source": "https://www.bankmillennium.pl/klienci-indywidualni/konta-osobiste/konto-millennium-360"
@@ -201,7 +202,7 @@
             "score": 9.02,
             "scoreYoung": 9.1,
             "scoreAdult": 9.02,
-            "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mbank%20logo.svg",
+            "logo": "/assets/logos/verified/mbank.svg",
             "logoFallback": "https://www.google.com/s2/favicons?domain=mbank.pl&sz=256",
             "providerUrl": "https://www.mbank.pl/indywidualny/konta/konta-osobiste/ekonto-do-uslug/",
             "source": "https://www.mbank.pl/indywidualny/konta/konta-osobiste/ekonto-do-uslug/"
@@ -229,7 +230,7 @@
             "score": 8.76,
             "scoreYoung": 8.84,
             "scoreAdult": 8.76,
-            "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/BNP%20Paribas%20logo.svg",
+            "logo": "/assets/logos/verified/bnp-paribas.png",
             "logoFallback": "https://www.google.com/s2/favicons?domain=bnpparibas.pl&sz=256",
             "providerUrl": "https://www.bnpparibas.pl/klienci-indywidualni/konta/promocja-podroznik",
             "source": "https://www.bnpparibas.pl/klienci-indywidualni/konta/promocja-podroznik"
@@ -246,7 +247,7 @@
             "source": "https://www.erste.pl/przedtem-santander-bank-polska",
             "scoreYoung": 8.71,
             "scoreAdult": 8.63,
-            "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cr%C3%A9dit%20Agricole%20logo%202017.svg",
+            "logo": "/assets/logos/verified/credit-agricole.svg",
             "logoFallback": "https://www.google.com/s2/favicons?domain=credit-agricole.pl&sz=256"
           },
           {
@@ -259,7 +260,7 @@
             "score": 8.5,
             "scoreYoung": 8.58,
             "scoreAdult": 8.5,
-            "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Velo%20Bank%202022%20logo.svg",
+            "logo": "/assets/logos/verified/velobank.svg",
             "logoFallback": "https://www.google.com/s2/favicons?domain=velobank.pl&sz=256",
             "providerUrl": "https://www.velobank.pl/klienci-indywidualni/konta-osobiste/velokonto.html",
             "source": "https://www.velobank.pl/klienci-indywidualni/konta-osobiste/velokonto.html"
@@ -347,7 +348,8 @@
             "metric2": "Payments, cards & online banking",
             "score": 9.28,
             "providerUrl": "https://revolut.com",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/revolut.svg"
           },
           {
             "provider": "Bank Millennium",
@@ -358,7 +360,8 @@
             "metric2": "mobile business banking",
             "score": 9.15,
             "source": "https://www.bankier.pl/smart/konta-firmowe",
-            "providerUrl": "https://bankmillennium.pl/"
+            "providerUrl": "https://bankmillennium.pl/",
+            "logo": "/assets/logos/verified/millennium.svg"
           },
           {
             "provider": "mBank",
@@ -369,7 +372,8 @@
             "metric2": "Payments, cards & online banking",
             "score": 9.02,
             "providerUrl": "https://mbank.pl",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/mbank.svg"
           },
           {
             "provider": "Alior Bank",
@@ -437,7 +441,8 @@
             "metric2": "Household banking",
             "score": 9.28,
             "providerUrl": "https://revolut.com",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/revolut.svg"
           },
           {
             "provider": "Bank Millennium",
@@ -448,7 +453,8 @@
             "metric2": "strong app",
             "score": 9.15,
             "source": "https://moneteo.com/rankingi/konta-osobiste",
-            "providerUrl": "https://bankmillennium.pl/"
+            "providerUrl": "https://bankmillennium.pl/",
+            "logo": "/assets/logos/verified/millennium.svg"
           },
           {
             "provider": "mBank",
@@ -459,7 +465,8 @@
             "metric2": "Household banking",
             "score": 9.02,
             "providerUrl": "https://mbank.pl",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/mbank.svg"
           }
         ],
         "student": [
@@ -516,7 +523,8 @@
             "metric2": "Age / student rules vary",
             "score": 9.28,
             "providerUrl": "https://revolut.com",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/revolut.svg"
           },
           {
             "provider": "Bank Millennium",
@@ -527,7 +535,8 @@
             "metric2": "Age / student rules vary",
             "score": 9.15,
             "providerUrl": "https://bankmillennium.pl",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/millennium.svg"
           },
           {
             "provider": "mBank",
@@ -538,7 +547,8 @@
             "metric2": "mature app",
             "score": 9.02,
             "source": "https://moneteo.com/rankingi/konta-dla-studentow",
-            "providerUrl": "https://mbank.pl/"
+            "providerUrl": "https://mbank.pl/",
+            "logo": "/assets/logos/verified/mbank.svg"
           }
         ],
         "youth": [
@@ -595,7 +605,8 @@
             "metric2": "Card + app features vary",
             "score": 9.28,
             "providerUrl": "https://revolut.com",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/revolut.svg"
           },
           {
             "provider": "Bank Millennium",
@@ -606,7 +617,8 @@
             "metric2": "Card + app features vary",
             "score": 9.15,
             "providerUrl": "https://bankmillennium.pl",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/millennium.svg"
           },
           {
             "provider": "mBank",
@@ -617,7 +629,8 @@
             "metric2": "Card + app features vary",
             "score": 9.02,
             "providerUrl": "https://mbank.pl",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/mbank.svg"
           },
           {
             "provider": "Alior Bank",
@@ -685,7 +698,8 @@
             "metric2": "Parental features vary",
             "score": 9.28,
             "providerUrl": "https://revolut.com",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/revolut.svg"
           },
           {
             "provider": "Bank Millennium",
@@ -696,7 +710,8 @@
             "metric2": "Parental features vary",
             "score": 9.15,
             "providerUrl": "https://bankmillennium.pl",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/millennium.svg"
           }
         ],
         "savings": [
@@ -753,7 +768,8 @@
             "metric2": "Current rates vary",
             "score": 9.28,
             "providerUrl": "https://revolut.com",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/revolut.svg"
           },
           {
             "provider": "Bank Millennium",
@@ -764,7 +780,8 @@
             "metric2": "recurring promo windows",
             "score": 9.15,
             "source": "https://moneteo.com/rankingi/konta-oszczednosciowe",
-            "providerUrl": "https://bankmillennium.pl/"
+            "providerUrl": "https://bankmillennium.pl/",
+            "logo": "/assets/logos/verified/millennium.svg"
           },
           {
             "provider": "mBank",
@@ -775,7 +792,8 @@
             "metric2": "Current rates vary",
             "score": 9.02,
             "providerUrl": "https://mbank.pl",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/mbank.svg"
           },
           {
             "provider": "Alior Bank",
@@ -797,7 +815,8 @@
             "metric2": "frequent new-money campaigns",
             "score": 8.76,
             "source": "https://moneteo.com/rankingi/konta-oszczednosciowe",
-            "providerUrl": "https://velobank.pl/"
+            "providerUrl": "https://velobank.pl/",
+            "logo": "/assets/logos/verified/velobank.svg"
           }
         ],
         "deposits": [
@@ -854,7 +873,8 @@
             "metric2": "Terms and minimums vary",
             "score": 9.28,
             "providerUrl": "https://revolut.com",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/revolut.svg"
           },
           {
             "provider": "Bank Millennium",
@@ -865,7 +885,8 @@
             "metric2": "wide term range",
             "score": 9.15,
             "source": "https://moneteo.com/rankingi/lokaty-bankowe",
-            "providerUrl": "https://bankmillennium.pl/"
+            "providerUrl": "https://bankmillennium.pl/",
+            "logo": "/assets/logos/verified/millennium.svg"
           },
           {
             "provider": "mBank",
@@ -876,7 +897,8 @@
             "metric2": "Terms and minimums vary",
             "score": 9.02,
             "providerUrl": "https://mbank.pl",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/mbank.svg"
           },
           {
             "provider": "Alior Bank",
@@ -955,7 +977,8 @@
             "metric2": "Liquidity rules vary",
             "score": 9.28,
             "providerUrl": "https://revolut.com",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/revolut.svg"
           },
           {
             "provider": "Bank Millennium",
@@ -966,7 +989,8 @@
             "metric2": "linked business banking",
             "score": 9.15,
             "source": "https://www.bankier.pl/smart/konta-firmowe",
-            "providerUrl": "https://bankmillennium.pl/"
+            "providerUrl": "https://bankmillennium.pl/",
+            "logo": "/assets/logos/verified/millennium.svg"
           },
           {
             "provider": "mBank",
@@ -977,7 +1001,8 @@
             "metric2": "Liquidity rules vary",
             "score": 9.02,
             "providerUrl": "https://mbank.pl",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/mbank.svg"
           }
         ],
         "child_savings": [
@@ -1034,7 +1059,8 @@
             "metric2": "Access rules vary",
             "score": 9.28,
             "providerUrl": "https://revolut.com",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/revolut.svg"
           },
           {
             "provider": "Bank Millennium",
@@ -1045,7 +1071,8 @@
             "metric2": "Access rules vary",
             "score": 9.15,
             "providerUrl": "https://bankmillennium.pl",
-            "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+            "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+            "logo": "/assets/logos/verified/millennium.svg"
           },
           {
             "provider": "Nest Bank",
@@ -1114,7 +1141,8 @@
               "metric2": "Funds / securities access",
               "score": 9.01,
               "providerUrl": "https://revolut.com",
-              "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+              "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+              "logo": "/assets/logos/verified/revolut.svg"
             },
             {
               "provider": "Bank Millennium",
@@ -1125,7 +1153,8 @@
               "metric2": "Funds / securities access",
               "score": 8.85,
               "providerUrl": "https://bankmillennium.pl",
-              "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+              "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+              "logo": "/assets/logos/verified/millennium.svg"
             }
           ],
           "specialist": [
@@ -1219,7 +1248,8 @@
               "metric2": "Platform or advice options",
               "score": 9.01,
               "providerUrl": "https://revolut.com",
-              "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+              "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+              "logo": "/assets/logos/verified/revolut.svg"
             },
             {
               "provider": "Bank Millennium",
@@ -1230,7 +1260,8 @@
               "metric2": "Platform or advice options",
               "score": 8.85,
               "providerUrl": "https://bankmillennium.pl",
-              "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+              "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+              "logo": "/assets/logos/verified/millennium.svg"
             }
           ],
           "specialist": [
@@ -1324,7 +1355,8 @@
               "metric2": "Minimums and fees vary",
               "score": 9.01,
               "providerUrl": "https://revolut.com",
-              "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+              "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+              "logo": "/assets/logos/verified/revolut.svg"
             }
           ],
           "specialist": [
@@ -1418,7 +1450,8 @@
               "metric2": "Trading fees vary",
               "score": 9.01,
               "providerUrl": "https://revolut.com",
-              "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+              "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+              "logo": "/assets/logos/verified/revolut.svg"
             },
             {
               "provider": "Bank Millennium",
@@ -1429,7 +1462,8 @@
               "metric2": "Trading fees vary",
               "score": 8.85,
               "providerUrl": "https://bankmillennium.pl",
-              "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+              "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+              "logo": "/assets/logos/verified/millennium.svg"
             }
           ],
           "specialist": [
@@ -1523,7 +1557,8 @@
               "metric2": "Tax treatment is country-specific",
               "score": 9.01,
               "providerUrl": "https://revolut.com",
-              "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+              "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+              "logo": "/assets/logos/verified/revolut.svg"
             },
             {
               "provider": "Bank Millennium",
@@ -1534,7 +1569,8 @@
               "metric2": "Tax treatment is country-specific",
               "score": 8.85,
               "providerUrl": "https://bankmillennium.pl",
-              "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+              "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+              "logo": "/assets/logos/verified/millennium.svg"
             }
           ],
           "specialist": [
@@ -1628,7 +1664,8 @@
               "metric2": "Eligibility varies",
               "score": 9.01,
               "providerUrl": "https://revolut.com",
-              "source": "https://www.erste.pl/przedtem-santander-bank-polska"
+              "source": "https://www.erste.pl/przedtem-santander-bank-polska",
+              "logo": "/assets/logos/verified/revolut.svg"
             }
           ],
           "specialist": [
@@ -1773,7 +1810,8 @@
             "providerUrl": "https://credit-agricole.it",
             "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
             "scoreYoung": 9.23,
-            "scoreAdult": 9.15
+            "scoreAdult": 9.15,
+            "logo": "/assets/logos/verified/credit-agricole.svg"
           },
           {
             "provider": "BNL BNP Paribas",
@@ -1786,7 +1824,8 @@
             "providerUrl": "https://bnl.it",
             "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
             "scoreYoung": 9.1,
-            "scoreAdult": 9.02
+            "scoreAdult": 9.02,
+            "logo": "/assets/logos/verified/bnp-paribas.png"
           },
           {
             "provider": "BancoPosta",
@@ -1869,7 +1908,7 @@
             "score": 8.25,
             "scoreYoung": 9.6,
             "scoreAdult": 9.6,
-            "logo": "https://commons.wikimedia.org/wiki/Special:Redirect/file/BBVA%20logo%202025.svg",
+            "logo": "/assets/logos/verified/bbva.svg",
             "logoFallback": "https://www.google.com/s2/favicons?domain=bbva.es&sz=256",
             "providerUrl": "https://www.bbva.it/persone/prodotti/conti/conto-corrente-online-zero-spese.html",
             "source": "https://www.bbva.it/persone/prodotti/conti/conto-corrente-online-zero-spese.html"
@@ -1940,7 +1979,8 @@
             "metric2": "Payments, cards & online banking",
             "score": 9.15,
             "providerUrl": "https://credit-agricole.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/credit-agricole.svg"
           },
           {
             "provider": "BNL BNP Paribas",
@@ -1951,7 +1991,8 @@
             "metric2": "Payments, cards & online banking",
             "score": 9.02,
             "providerUrl": "https://bnl.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/bnp-paribas.png"
           },
           {
             "provider": "BancoPosta",
@@ -2041,7 +2082,8 @@
             "metric2": "Household banking",
             "score": 9.15,
             "providerUrl": "https://credit-agricole.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/credit-agricole.svg"
           },
           {
             "provider": "BNL BNP Paribas",
@@ -2052,7 +2094,8 @@
             "metric2": "Household banking",
             "score": 9.02,
             "providerUrl": "https://bnl.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/bnp-paribas.png"
           },
           {
             "provider": "Fineco",
@@ -2131,7 +2174,8 @@
             "metric2": "Age / student rules vary",
             "score": 9.15,
             "providerUrl": "https://credit-agricole.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/credit-agricole.svg"
           },
           {
             "provider": "BNL BNP Paribas",
@@ -2142,7 +2186,8 @@
             "metric2": "Age / student rules vary",
             "score": 9.02,
             "providerUrl": "https://bnl.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/bnp-paribas.png"
           },
           {
             "provider": "isybank",
@@ -2232,7 +2277,8 @@
             "metric2": "Card + app features vary",
             "score": 9.15,
             "providerUrl": "https://credit-agricole.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/credit-agricole.svg"
           },
           {
             "provider": "BNL BNP Paribas",
@@ -2243,7 +2289,8 @@
             "metric2": "Card + app features vary",
             "score": 9.02,
             "providerUrl": "https://bnl.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/bnp-paribas.png"
           },
           {
             "provider": "isybank",
@@ -2333,7 +2380,8 @@
             "metric2": "Parental features vary",
             "score": 9.15,
             "providerUrl": "https://credit-agricole.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/credit-agricole.svg"
           },
           {
             "provider": "Fineco",
@@ -2412,7 +2460,8 @@
             "metric2": "Current rates vary",
             "score": 9.15,
             "providerUrl": "https://credit-agricole.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/credit-agricole.svg"
           },
           {
             "provider": "BNL BNP Paribas",
@@ -2423,7 +2472,8 @@
             "metric2": "Current rates vary",
             "score": 9.02,
             "providerUrl": "https://bnl.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/bnp-paribas.png"
           },
           {
             "provider": "BancoPosta",
@@ -2524,7 +2574,8 @@
             "metric2": "Terms and minimums vary",
             "score": 9.15,
             "providerUrl": "https://credit-agricole.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/credit-agricole.svg"
           },
           {
             "provider": "BNL BNP Paribas",
@@ -2535,7 +2586,8 @@
             "metric2": "Terms and minimums vary",
             "score": 9.02,
             "providerUrl": "https://bnl.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/bnp-paribas.png"
           },
           {
             "provider": "BancoPosta",
@@ -2636,7 +2688,8 @@
             "metric2": "Liquidity rules vary",
             "score": 9.15,
             "providerUrl": "https://credit-agricole.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/credit-agricole.svg"
           },
           {
             "provider": "BNL BNP Paribas",
@@ -2647,7 +2700,8 @@
             "metric2": "Liquidity rules vary",
             "score": 9.02,
             "providerUrl": "https://bnl.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/bnp-paribas.png"
           },
           {
             "provider": "Banca Sella",
@@ -2726,7 +2780,8 @@
             "metric2": "Access rules vary",
             "score": 9.15,
             "providerUrl": "https://credit-agricole.it",
-            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+            "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+            "logo": "/assets/logos/verified/credit-agricole.svg"
           },
           {
             "provider": "Fineco",
@@ -2806,7 +2861,8 @@
               "metric2": "Funds / securities access",
               "score": 8.85,
               "providerUrl": "https://credit-agricole.it",
-              "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+              "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+              "logo": "/assets/logos/verified/credit-agricole.svg"
             }
           ],
           "specialist": [
@@ -2911,7 +2967,8 @@
               "metric2": "Platform or advice options",
               "score": 8.85,
               "providerUrl": "https://credit-agricole.it",
-              "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+              "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+              "logo": "/assets/logos/verified/credit-agricole.svg"
             }
           ],
           "specialist": [
@@ -3110,7 +3167,8 @@
               "metric2": "Trading fees vary",
               "score": 8.85,
               "providerUrl": "https://credit-agricole.it",
-              "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+              "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+              "logo": "/assets/logos/verified/credit-agricole.svg"
             }
           ],
           "specialist": [
@@ -3215,7 +3273,8 @@
               "metric2": "Tax treatment is country-specific",
               "score": 8.85,
               "providerUrl": "https://credit-agricole.it",
-              "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html"
+              "source": "https://www.bancaditalia.it/compiti/vigilanza/intermediari/index.html",
+              "logo": "/assets/logos/verified/credit-agricole.svg"
             }
           ],
           "specialist": [
@@ -3416,8 +3475,13 @@
               "Las condiciones de la tarjeta de crédito dependen de aprobación; la comparación utiliza débito."
             ],
             "bestFor": "Cuenta digital con débito y promoción opcional de nómina.",
-            "logo": "/assets/logos/banco-sabadell.svg",
-            "affiliateUrl": null
+            "logo": "/assets/logos/verified/sabadell.svg",
+            "affiliateUrl": null,
+            "display": {
+              "atmHeadline": "0 €",
+              "atmSummary": "En Sabadell España; otras redes con condiciones.",
+              "cardSummary": "Débito incluido, sin emisión ni mantenimiento."
+            }
           },
           {
             "id": "n26-standard",
@@ -3471,8 +3535,13 @@
               "Las tarjetas virtuales adicionales y la tarjeta física pueden tener coste."
             ],
             "bestFor": "Uso móvil con tarjeta virtual y pocas retiradas en euros.",
-            "logo": "/assets/logos/n26.svg",
-            "affiliateUrl": null
+            "logo": "/assets/logos/verified/n26.svg",
+            "affiliateUrl": null,
+            "display": {
+              "atmHeadline": "2 retiradas",
+              "atmSummary": "Gratis/mes en euros en la eurozona; recargos aparte.",
+              "cardSummary": "Una virtual incluida; física opcional: 10 €."
+            }
           },
           {
             "id": "revolut-standard",
@@ -3522,8 +3591,13 @@
               "La entrega física no está incluida en el cálculo anual básico."
             ],
             "bestFor": "Cuenta móvil con virtuales y transferencias SEPA.",
-            "logo": null,
-            "affiliateUrl": null
+            "logo": "/assets/logos/verified/revolut.svg",
+            "affiliateUrl": null,
+            "display": {
+              "atmHeadline": "5 o 200 €",
+              "atmSummary": "Por ciclo mensual; lo que ocurra antes.",
+              "cardSummary": "Virtuales incluidas; envío físico estándar local: 6,99 €."
+            }
           },
           {
             "id": "bbva-online",
@@ -3565,8 +3639,13 @@
               "La ventana de contratación de PLAN1060 termina el 20/10/2026; verificar prórrogas y bases con BBVA."
             ],
             "bestFor": "Débito y banca digital con acceso a oficinas.",
-            "logo": "/assets/logos/bbva.svg",
-            "affiliateUrl": null
+            "logo": "/assets/logos/verified/bbva.svg",
+            "affiliateUrl": null,
+            "display": {
+              "atmHeadline": "0 €",
+              "atmSummary": "En BBVA España; otras redes con coste.",
+              "cardSummary": "Aqua Débito incluida. Crédito opcional con condiciones."
+            }
           },
           {
             "id": "openbank-corriente",
@@ -3612,8 +3691,13 @@
               "La comparación básica cubre solo la tarjeta principal del primer titular."
             ],
             "bestFor": "Cuenta corriente con débito principal y cajeros Santander.",
-            "logo": "/assets/logos/openbank.svg",
-            "affiliateUrl": null
+            "logo": "/assets/logos/verified/openbank.svg",
+            "affiliateUrl": null,
+            "display": {
+              "atmHeadline": "0 €",
+              "atmSummary": "En Openbank y Santander España.",
+              "cardSummary": "Débito del primer titular. Tarjetas adicionales con coste."
+            }
           },
           {
             "id": "bankinter-digital",
@@ -3663,8 +3747,13 @@
               "El incentivo tiene límite de contrataciones y no se genera con autotransferencias; revisar bases."
             ],
             "bestFor": "Cuenta y débito sin nómina, con incentivo opcional.",
-            "logo": null,
-            "affiliateUrl": null
+            "logo": "/assets/logos/verified/bankinter.svg",
+            "affiliateUrl": null,
+            "display": {
+              "atmHeadline": "0 €",
+              "atmSummary": "En red propia y redes indicadas por el banco.",
+              "cardSummary": "Débito incluido. Crédito opcional con otras tarifas."
+            }
           }
         ],
         "business": [
@@ -3688,7 +3777,8 @@
             "metric2": "business app/tools",
             "score": 9.67,
             "source": "https://www.rankia.com/blog/autonomos-y-emprendedores/4422356-mejores-cuentas-para-empresas-comisiones",
-            "providerUrl": "https://bbva.es/"
+            "providerUrl": "https://bbva.es/",
+            "logo": "/assets/logos/verified/bbva.svg"
           },
           {
             "provider": "CaixaBank",
@@ -3710,7 +3800,8 @@
             "metric2": "Payments, cards & online banking",
             "score": 9.41,
             "providerUrl": "https://bancsabadell.com",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/sabadell.svg"
           },
           {
             "provider": "Bankinter",
@@ -3721,7 +3812,8 @@
             "metric2": "Spanish business bank",
             "score": 9.28,
             "source": "https://www.rankia.com/blog/autonomos-y-emprendedores/4422356-mejores-cuentas-para-empresas-comisiones",
-            "providerUrl": "https://bankinter.com/"
+            "providerUrl": "https://bankinter.com/",
+            "logo": "/assets/logos/verified/bankinter.svg"
           },
           {
             "provider": "Unicaja Banco",
@@ -3789,7 +3881,8 @@
             "metric2": "strong digital tools",
             "score": 9.67,
             "source": "https://www.helpmycash.com/cuentas/cuentas-con-dos-titulares/",
-            "providerUrl": "https://bbva.es/"
+            "providerUrl": "https://bbva.es/",
+            "logo": "/assets/logos/verified/bbva.svg"
           },
           {
             "provider": "CaixaBank",
@@ -3811,7 +3904,8 @@
             "metric2": "large bank network",
             "score": 9.41,
             "source": "https://www.helpmycash.com/cuentas/cuentas-con-dos-titulares/",
-            "providerUrl": "https://bancsabadell.com/"
+            "providerUrl": "https://bancsabadell.com/",
+            "logo": "/assets/logos/verified/sabadell.svg"
           },
           {
             "provider": "Bankinter",
@@ -3822,7 +3916,8 @@
             "metric2": "Household banking",
             "score": 9.28,
             "providerUrl": "https://bankinter.com",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/bankinter.svg"
           },
           {
             "provider": "Unicaja Banco",
@@ -3855,7 +3950,8 @@
             "metric2": "simple online setup",
             "score": 8.89,
             "source": "https://www.helpmycash.com/cuentas/cuentas-con-dos-titulares/",
-            "providerUrl": "https://openbank.es/"
+            "providerUrl": "https://openbank.es/",
+            "logo": "/assets/logos/verified/openbank.svg"
           }
         ],
         "student": [
@@ -3879,7 +3975,8 @@
             "metric2": "strong app",
             "score": 9.67,
             "source": "https://www.helpmycash.com/cuentas/cuenta-joven/",
-            "providerUrl": "https://bbva.es/"
+            "providerUrl": "https://bbva.es/",
+            "logo": "/assets/logos/verified/bbva.svg"
           },
           {
             "provider": "CaixaBank",
@@ -3901,7 +3998,8 @@
             "metric2": "Age / student rules vary",
             "score": 9.41,
             "providerUrl": "https://bancsabadell.com",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/sabadell.svg"
           },
           {
             "provider": "Bankinter",
@@ -3912,7 +4010,8 @@
             "metric2": "Age / student rules vary",
             "score": 9.28,
             "providerUrl": "https://bankinter.com",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/bankinter.svg"
           },
           {
             "provider": "Unicaja Banco",
@@ -3945,7 +4044,8 @@
             "metric2": "low-friction online use",
             "score": 8.89,
             "source": "https://www.helpmycash.com/cuentas/cuenta-joven/",
-            "providerUrl": "https://openbank.es/"
+            "providerUrl": "https://openbank.es/",
+            "logo": "/assets/logos/verified/openbank.svg"
           },
           {
             "provider": "Santander España",
@@ -3980,7 +4080,8 @@
             "metric2": "parent supervision",
             "score": 9.67,
             "source": "https://www.helpmycash.com/cuentas/cuenta-joven/",
-            "providerUrl": "https://bbva.es/"
+            "providerUrl": "https://bbva.es/",
+            "logo": "/assets/logos/verified/bbva.svg"
           },
           {
             "provider": "CaixaBank",
@@ -4002,7 +4103,8 @@
             "metric2": "Card + app features vary",
             "score": 9.41,
             "providerUrl": "https://bancsabadell.com",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/sabadell.svg"
           },
           {
             "provider": "Bankinter",
@@ -4013,7 +4115,8 @@
             "metric2": "Card + app features vary",
             "score": 9.28,
             "providerUrl": "https://bankinter.com",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/bankinter.svg"
           },
           {
             "provider": "Unicaja Banco",
@@ -4046,7 +4149,8 @@
             "metric2": "parent-linked setup",
             "score": 8.89,
             "source": "https://www.helpmycash.com/cuentas/cuenta-joven/",
-            "providerUrl": "https://openbank.es/"
+            "providerUrl": "https://openbank.es/",
+            "logo": "/assets/logos/verified/openbank.svg"
           },
           {
             "provider": "Santander España",
@@ -4081,7 +4185,8 @@
             "metric2": "parent controls",
             "score": 9.67,
             "source": "https://www.helpmycash.com/cuentas/cuentas-para-ninos/",
-            "providerUrl": "https://bbva.es/"
+            "providerUrl": "https://bbva.es/",
+            "logo": "/assets/logos/verified/bbva.svg"
           },
           {
             "provider": "CaixaBank",
@@ -4103,7 +4208,8 @@
             "metric2": "Parental features vary",
             "score": 9.41,
             "providerUrl": "https://bancsabadell.com",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/sabadell.svg"
           },
           {
             "provider": "Bankinter",
@@ -4114,7 +4220,8 @@
             "metric2": "Parental features vary",
             "score": 9.28,
             "providerUrl": "https://bankinter.com",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/bankinter.svg"
           },
           {
             "provider": "Unicaja Banco",
@@ -4136,7 +4243,8 @@
             "metric2": "Santander group",
             "score": 9.02,
             "source": "https://www.helpmycash.com/cuentas/cuentas-para-ninos/",
-            "providerUrl": "https://openbank.es/"
+            "providerUrl": "https://openbank.es/",
+            "logo": "/assets/logos/verified/openbank.svg"
           },
           {
             "provider": "Santander España",
@@ -4171,7 +4279,8 @@
             "metric2": "Current rates vary",
             "score": 9.67,
             "providerUrl": "https://bbva.es",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/bbva.svg"
           },
           {
             "provider": "CaixaBank",
@@ -4193,7 +4302,8 @@
             "metric2": "Current rates vary",
             "score": 9.41,
             "providerUrl": "https://bancsabadell.com",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/sabadell.svg"
           },
           {
             "provider": "Bankinter",
@@ -4204,7 +4314,8 @@
             "metric2": "Spanish bank",
             "score": 9.28,
             "source": "https://www.rankia.com/blog/cuentas-corrientes/2604433-mejores-cuentas-ahorro",
-            "providerUrl": "https://bankinter.com/"
+            "providerUrl": "https://bankinter.com/",
+            "logo": "/assets/logos/verified/bankinter.svg"
           },
           {
             "provider": "Unicaja Banco",
@@ -4248,7 +4359,8 @@
             "metric2": "bank protection",
             "score": 8.76,
             "source": "https://www.rankia.com/blog/cuentas-corrientes/2604433-mejores-cuentas-ahorro",
-            "providerUrl": "https://openbank.es/"
+            "providerUrl": "https://openbank.es/",
+            "logo": "/assets/logos/verified/openbank.svg"
           },
           {
             "provider": "Renault Bank",
@@ -4283,7 +4395,8 @@
             "metric2": "Terms and minimums vary",
             "score": 9.67,
             "providerUrl": "https://bbva.es",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/bbva.svg"
           },
           {
             "provider": "CaixaBank",
@@ -4305,7 +4418,8 @@
             "metric2": "Terms and minimums vary",
             "score": 9.41,
             "providerUrl": "https://bancsabadell.com",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/sabadell.svg"
           },
           {
             "provider": "Bankinter",
@@ -4316,7 +4430,8 @@
             "metric2": "full Spanish bank",
             "score": 9.28,
             "source": "https://www.helpmycash.com/depositos/",
-            "providerUrl": "https://bankinter.com/"
+            "providerUrl": "https://bankinter.com/",
+            "logo": "/assets/logos/verified/bankinter.svg"
           },
           {
             "provider": "Unicaja Banco",
@@ -4371,7 +4486,8 @@
             "metric2": "online opening",
             "score": 8.63,
             "source": "https://www.helpmycash.com/depositos/",
-            "providerUrl": "https://openbank.es/"
+            "providerUrl": "https://openbank.es/",
+            "logo": "/assets/logos/verified/openbank.svg"
           }
         ],
         "business_savings": [
@@ -4395,7 +4511,8 @@
             "metric2": "large bank",
             "score": 9.67,
             "source": "https://www.rankia.com/blog/autonomos-y-emprendedores/4533446-mejores-cuentas-para-empresas-100-online",
-            "providerUrl": "https://bbva.es/"
+            "providerUrl": "https://bbva.es/",
+            "logo": "/assets/logos/verified/bbva.svg"
           },
           {
             "provider": "CaixaBank",
@@ -4417,7 +4534,8 @@
             "metric2": "Liquidity rules vary",
             "score": 9.41,
             "providerUrl": "https://bancsabadell.com",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/sabadell.svg"
           },
           {
             "provider": "Bankinter",
@@ -4428,7 +4546,8 @@
             "metric2": "linked business account",
             "score": 9.28,
             "source": "https://www.rankia.com/blog/autonomos-y-emprendedores/4533446-mejores-cuentas-para-empresas-100-online",
-            "providerUrl": "https://bankinter.com/"
+            "providerUrl": "https://bankinter.com/",
+            "logo": "/assets/logos/verified/bankinter.svg"
           },
           {
             "provider": "Unicaja Banco",
@@ -4485,7 +4604,8 @@
             "metric2": "parent oversight",
             "score": 9.67,
             "source": "https://www.helpmycash.com/cuentas/cuentas-para-ninos/",
-            "providerUrl": "https://bbva.es/"
+            "providerUrl": "https://bbva.es/",
+            "logo": "/assets/logos/verified/bbva.svg"
           },
           {
             "provider": "CaixaBank",
@@ -4507,7 +4627,8 @@
             "metric2": "Access rules vary",
             "score": 9.41,
             "providerUrl": "https://bancsabadell.com",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/sabadell.svg"
           },
           {
             "provider": "Bankinter",
@@ -4518,7 +4639,8 @@
             "metric2": "Access rules vary",
             "score": 9.28,
             "providerUrl": "https://bankinter.com",
-            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+            "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+            "logo": "/assets/logos/verified/bankinter.svg"
           },
           {
             "provider": "Unicaja Banco",
@@ -4540,7 +4662,8 @@
             "metric2": "Santander group",
             "score": 9.02,
             "source": "https://www.helpmycash.com/cuentas/cuentas-para-ninos/",
-            "providerUrl": "https://openbank.es/"
+            "providerUrl": "https://openbank.es/",
+            "logo": "/assets/logos/verified/openbank.svg"
           },
           {
             "provider": "Santander España",
@@ -4576,7 +4699,8 @@
               "metric2": "bank-group integration",
               "score": 9.49,
               "source": "https://www.helpmycash.com/invertir/en-que-invertir/",
-              "providerUrl": "https://bbva.es/"
+              "providerUrl": "https://bbva.es/",
+              "logo": "/assets/logos/verified/bbva.svg"
             },
             {
               "provider": "CaixaBank",
@@ -4598,7 +4722,8 @@
               "metric2": "Funds / securities access",
               "score": 9.17,
               "providerUrl": "https://bancsabadell.com",
-              "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+              "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+              "logo": "/assets/logos/verified/sabadell.svg"
             },
             {
               "provider": "Bankinter",
@@ -4609,7 +4734,8 @@
               "metric2": "bank-group integration",
               "score": 9.01,
               "source": "https://www.helpmycash.com/invertir/en-que-invertir/",
-              "providerUrl": "https://bankinter.com/"
+              "providerUrl": "https://bankinter.com/",
+              "logo": "/assets/logos/verified/bankinter.svg"
             },
             {
               "provider": "Unicaja Banco",
@@ -4681,7 +4807,8 @@
               "metric2": "bank-group integration",
               "score": 9.49,
               "source": "https://www.helpmycash.com/invertir/fondos-inversion/",
-              "providerUrl": "https://bbva.es/"
+              "providerUrl": "https://bbva.es/",
+              "logo": "/assets/logos/verified/bbva.svg"
             },
             {
               "provider": "CaixaBank",
@@ -4703,7 +4830,8 @@
               "metric2": "Platform or advice options",
               "score": 9.17,
               "providerUrl": "https://bancsabadell.com",
-              "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+              "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+              "logo": "/assets/logos/verified/sabadell.svg"
             },
             {
               "provider": "Bankinter",
@@ -4714,7 +4842,8 @@
               "metric2": "bank-group integration",
               "score": 9.01,
               "source": "https://www.helpmycash.com/invertir/fondos-inversion/",
-              "providerUrl": "https://bankinter.com/"
+              "providerUrl": "https://bankinter.com/",
+              "logo": "/assets/logos/verified/bankinter.svg"
             },
             {
               "provider": "Unicaja Banco",
@@ -4786,7 +4915,8 @@
               "metric2": "bank-group integration",
               "score": 9.49,
               "source": "https://www.helpmycash.com/invertir/robo-advisors/",
-              "providerUrl": "https://bbva.es/"
+              "providerUrl": "https://bbva.es/",
+              "logo": "/assets/logos/verified/bbva.svg"
             },
             {
               "provider": "CaixaBank",
@@ -4808,7 +4938,8 @@
               "metric2": "Minimums and fees vary",
               "score": 9.17,
               "providerUrl": "https://bancsabadell.com",
-              "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+              "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+              "logo": "/assets/logos/verified/sabadell.svg"
             },
             {
               "provider": "Bankinter",
@@ -4819,7 +4950,8 @@
               "metric2": "bank-group integration",
               "score": 9.01,
               "source": "https://www.helpmycash.com/invertir/robo-advisors/",
-              "providerUrl": "https://bankinter.com/"
+              "providerUrl": "https://bankinter.com/",
+              "logo": "/assets/logos/verified/bankinter.svg"
             }
           ],
           "specialist": [
@@ -4880,7 +5012,8 @@
               "metric2": "bank-group integration",
               "score": 9.49,
               "source": "https://www.helpmycash.com/invertir/en-que-invertir/",
-              "providerUrl": "https://bbva.es/"
+              "providerUrl": "https://bbva.es/",
+              "logo": "/assets/logos/verified/bbva.svg"
             },
             {
               "provider": "CaixaBank",
@@ -4902,7 +5035,8 @@
               "metric2": "Trading fees vary",
               "score": 9.17,
               "providerUrl": "https://bancsabadell.com",
-              "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+              "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+              "logo": "/assets/logos/verified/sabadell.svg"
             },
             {
               "provider": "Bankinter",
@@ -4913,7 +5047,8 @@
               "metric2": "bank-group integration",
               "score": 9.01,
               "source": "https://www.helpmycash.com/invertir/en-que-invertir/",
-              "providerUrl": "https://bankinter.com/"
+              "providerUrl": "https://bankinter.com/",
+              "logo": "/assets/logos/verified/bankinter.svg"
             },
             {
               "provider": "Unicaja Banco",
@@ -4985,7 +5120,8 @@
               "metric2": "bank-group integration",
               "score": 9.49,
               "source": "https://www.rankia.com/blog/fondos-inversion/5298656-mejores-planes-pensiones",
-              "providerUrl": "https://bbva.es/"
+              "providerUrl": "https://bbva.es/",
+              "logo": "/assets/logos/verified/bbva.svg"
             },
             {
               "provider": "CaixaBank",
@@ -5007,7 +5143,8 @@
               "metric2": "Tax treatment is country-specific",
               "score": 9.17,
               "providerUrl": "https://bancsabadell.com",
-              "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+              "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+              "logo": "/assets/logos/verified/sabadell.svg"
             },
             {
               "provider": "Bankinter",
@@ -5018,7 +5155,8 @@
               "metric2": "bank-group integration",
               "score": 9.01,
               "source": "https://www.rankia.com/blog/fondos-inversion/5298656-mejores-planes-pensiones",
-              "providerUrl": "https://bankinter.com/"
+              "providerUrl": "https://bankinter.com/",
+              "logo": "/assets/logos/verified/bankinter.svg"
             },
             {
               "provider": "Unicaja Banco",
@@ -5090,7 +5228,8 @@
               "metric2": "bank-group integration",
               "score": 9.49,
               "source": "https://www.rankia.com/blog/autonomos-y-emprendedores/",
-              "providerUrl": "https://bbva.es/"
+              "providerUrl": "https://bbva.es/",
+              "logo": "/assets/logos/verified/bbva.svg"
             },
             {
               "provider": "CaixaBank",
@@ -5112,7 +5251,8 @@
               "metric2": "Eligibility varies",
               "score": 9.17,
               "providerUrl": "https://bancsabadell.com",
-              "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/"
+              "source": "https://www.bde.es/wbe/en/entidades-profesionales/operativa-gestiones/autorizaciones-acreditaciones/entidades-credito/",
+              "logo": "/assets/logos/verified/sabadell.svg"
             },
             {
               "provider": "Bankinter",
@@ -5123,7 +5263,8 @@
               "metric2": "bank-group integration",
               "score": 9.01,
               "source": "https://www.rankia.com/blog/autonomos-y-emprendedores/",
-              "providerUrl": "https://bankinter.com/"
+              "providerUrl": "https://bankinter.com/",
+              "logo": "/assets/logos/verified/bankinter.svg"
             }
           ],
           "specialist": [

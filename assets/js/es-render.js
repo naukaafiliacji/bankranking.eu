@@ -5,7 +5,7 @@
 })(typeof globalThis!=='undefined'?globalThis:this,function(core){
   'use strict';
   const esc = value => String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const money = value => core.finite(value)?new Intl.NumberFormat('es-ES',{style:'currency',currency:'EUR',maximumFractionDigits:2}).format(value):'Sin dato verificado';
+  const money = value => core.finite(value)?new Intl.NumberFormat('es-ES',{style:'currency',currency:'EUR',minimumFractionDigits:0,maximumFractionDigits:2}).format(value):'Sin dato verificado';
   const date = value => /^\d{4}-\d{2}-\d{2}$/.test(value||'')?new Intl.DateTimeFormat('es-ES',{timeZone:'UTC',day:'numeric',month:'long',year:'numeric'}).format(new Date(value+'T12:00:00Z')):'Fecha no disponible';
   function safeUrl(value){try{const u=new URL(value,'https://bankranking.eu');return ['https:','http:'].includes(u.protocol)?esc(value):'#';}catch{return '#';}}
   function feeText(x){return core.finite(x.monthlyFee)?money(x.monthlyFee)+(x.feeWaiverRequired?' con condiciones':' al mes'):'Consultar tarifa';}
@@ -33,15 +33,23 @@
   function card(x,today,selected,interactive){
     const annual=core.annualMaintenance(x),bonus=core.activeBonus(x,today);
     const href=x.affiliateUrl||x.providerUrl;
-    const logo=x.logo?'<img src="'+safeUrl(x.logo)+'" width="49" height="49" alt="" loading="lazy">':'<span class="provider-monogram" aria-hidden="true">'+esc(x.provider.split(/\s+/).map(s=>s[0]).join('').slice(0,2))+'</span>';
+    const logo=x.logo?'<img src="'+safeUrl(x.logo)+'" width="128" height="42" alt="Logo de '+esc(x.provider)+'" loading="lazy">':'<span class="provider-monogram" aria-hidden="true">'+esc(x.provider.split(/\s+/).map(s=>s[0]).join('').slice(0,2))+'</span>';
+    const cardAnnual=core.finite(x.monthlyCardFee)&&core.finite(x.annualCardFee)?12*x.monthlyCardFee+x.annualCardFee:null;
+    const cardNote=x.display?.cardSummary||x.cardScope||'Consulta la tarjeta incluida.';
+    const expired=!!(x.bonusExpiresAt&&x.bonusExpiresAt<today);
+    const status=x.feeWaiverRequired===false&&x.payrollRequired===false?'Mantenimiento sin nómina':x.payrollRequired===true?'Nómina obligatoria':'Consulta los requisitos';
+    const arrow='<svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     return `<article class="account-card" id="cuenta-${esc(x.id)}" data-account="${esc(x.id)}">
-      <div class="account-overview">
-        <div class="provider">${logo}<div><h3>${esc(x.provider)}</h3><p class="product-name">${esc(x.product)}</p><span class="usage">${esc(x.bestFor||'Cuenta personal')}</span></div></div>
-        <div class="price-blocks"><div><span class="metric-label">Cuenta / mes</span><strong class="price">${core.finite(x.monthlyFee)?esc(money(x.monthlyFee)):'Consultar'}</strong><p class="metric-note">${x.feeWaiverRequired?'Sujeto a condiciones de bonificación.':'Mantenimiento de la cuenta.'}</p></div><div><span class="metric-label">Mantenimiento / año</span><strong class="price">${annual===null?'Consultar':esc(money(annual))}</strong><p class="metric-note">Cuenta y tarjeta incluida; sin emisión, envío ni operaciones.</p></div>${bonus?'<span class="bonus-label">'+esc(bonusText(x,today))+'</span>':''}</div>
-        <div class="card-actions"><a class="primary-button" href="${safeUrl(href)}" target="_blank" rel="${x.affiliateUrl?'sponsored nofollow noopener noreferrer':'noopener noreferrer'}">Ver cuenta en el banco ↗</a>${interactive?'<label class="compare-choice"><input type="checkbox" data-compare="'+esc(x.id)+'" '+(selected&&selected.has(x.id)?'checked':'')+' aria-label="Comparar '+esc(x.provider)+' '+esc(x.product)+'">Comparar cuenta</label>':'<a class="secondary-button" href="#detalles-'+esc(x.id)+'">Ver condiciones ↓</a>'}</div>
-      </div>
+      <header class="account-card-head"><div class="provider"><div class="provider-logo-wrap">${logo}</div><div class="provider-copy"><h3>${esc(x.provider)}</h3><p class="product-name">${esc(x.product)}</p></div></div><span class="account-status">${esc(status)}</span></header>
+      <div class="account-overview"><div class="account-metrics">
+        <div class="account-metric"><span class="metric-label">Cuenta / mes</span><strong class="price">${core.finite(x.monthlyFee)?esc(money(x.monthlyFee)):'Consultar'}</strong><p class="metric-note">${x.feeWaiverRequired?'Sujeto a condiciones.':'Mantenimiento de la cuenta.'}</p></div>
+        <div class="account-metric"><span class="metric-label">Tarjeta incluida / año</span><strong class="price">${cardAnnual===null?'Consultar':esc(money(cardAnnual))}</strong><p class="metric-note">${esc(cardNote)}</p></div>
+        <div class="account-metric"><span class="metric-label">Retiradas de efectivo</span><strong class="price price-atm">${esc(x.display?.atmHeadline||'Consultar')}</strong><p class="metric-note">${esc(x.display?.atmSummary||'Consulta las redes, límites y comisiones.')}</p></div>
+        <div class="account-metric account-metric-bonus"><span class="metric-label">Incentivo de bienvenida</span><strong class="price ${bonus?'price-bonus':'price-empty'}">${bonus?'Hasta '+esc(money(bonus)):expired?'Finalizado':'—'}</strong><p class="metric-note">${bonus?(x.bonusGross?'Importe bruto. ':'')+'Sujeto a requisitos y plazo.':expired?'La promoción registrada ha terminado.':'Sin incentivo general cuantificado.'}</p></div>
+      </div><div class="card-actions"><a class="primary-button" href="${safeUrl(href)}" target="_blank" rel="${x.affiliateUrl?'sponsored nofollow noopener noreferrer':'noopener noreferrer'}"><span>Ver cuenta</span>${arrow}</a>${interactive?'<label class="compare-choice"><input type="checkbox" data-compare="'+esc(x.id)+'" '+(selected&&selected.has(x.id)?'checked':'')+' aria-label="Comparar '+esc(x.provider)+' '+esc(x.product)+'">Añadir a comparar</label>':''}</div></div>
+      <div class="account-benefits"><span class="account-use">${esc(x.bestFor||'Cuenta personal')}</span><span class="annual-cost">Mantenimiento a 12 meses: <strong>${annual===null?'consultar':esc(money(annual))}</strong></span></div>
       <details class="account-details" id="detalles-${esc(x.id)}"><summary>Costes, requisitos y fuentes de ${esc(x.provider)}</summary><div class="detail-content"><dl class="fact-grid">${facts(x,today).map(([k,v])=>'<div><dt>'+esc(k)+'</dt><dd>'+esc(v)+'</dd></div>').join('')}</dl>${x.caveats?.length?'<ul class="caveats">'+x.caveats.map(v=>'<li>'+esc(v)+'</li>').join('')+'</ul>':''}<div class="source-links">${sources(x)}</div></div></details>
-      <div class="account-foot"><span>Comprobado: <time datetime="${esc(x.verifiedAt)}">${esc(date(x.verifiedAt))}</time></span><a href="/espanol/metodologia/">Cómo comparamos</a></div>
+      <div class="account-foot"><span>Datos comprobados: <time datetime="${esc(x.verifiedAt)}">${esc(date(x.verifiedAt))}</time></span><span>Cuenta y tarjeta incluida; emisión, envío y operaciones aparte.</span></div>
     </article>`;
   }
   function comparison(accounts,today){
