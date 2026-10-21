@@ -1,6 +1,6 @@
 # BankRanking Europe — wydanie przygotowane do Kwanko
 
-Wydanie: 20 października 2026 r. Statyczna strona HTML/CSS/JavaScript, bez zależności wymaganych na hostingu.
+Wydanie: 21 października 2026 r. Dane kont ES zweryfikowano 20 października; wyróżnienie N26 sprawdzono ponownie 21 października. Statyczna strona HTML/CSS/JavaScript, bez zależności wymaganych na hostingu.
 
 ## Zawartość
 
@@ -33,3 +33,10 @@ Linki prowadzą do oficjalnych stron banków, dopóki wydawca nie otrzyma zatwie
 Na hosting publikuje się zawartość tego katalogu: `index.html`, `assets/`, podkatalogi i pozostałe pliki. Zachowaj strukturę adresów oraz istniejący `CNAME`, jeśli domena nadal korzysta z tej konfiguracji.
 
 Kod i dane przygotowano do publikacji; dostarczenie paczki nie oznacza jej automatycznego opublikowania ani akceptacji Kwanko. Przyjęcie do sieci i dopuszczenie do kampanii banku są osobnymi decyzjami.
+
+## Wiadomości i wygląd
+
+- `/news/`: 15 angielskich artykułów o wydarzeniach od lipca do października 2026 r. Daty wydarzeń i napisania są oddzielone.
+- Edycja wiadomości: `assets/data/news.json`, następnie `node scripts/build-news.cjs`.
+- Kompaktowy wygląd porównania ES: `assets/css/es-refined.css`; logika i zweryfikowane źródła pozostają wspólne.
+- Wyróżniona oferta N26 na angielskiej stronie głównej jest informacją redakcyjną ze zwykłą taryfą. Aktualizując dane N26, zaktualizuj także ten blok w `index.html`.
