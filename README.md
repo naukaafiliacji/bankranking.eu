@@ -1,86 +1,35 @@
-# BankRanking V5 — homepage closely inspired by bank.nl
+# BankRanking Europe — wydanie przygotowane do Kwanko
 
-This build preserves the existing V5 country ranking pages and data.
-The homepage has been rebuilt in a much simpler portal style inspired by the structure and visual rhythm of bank.nl, but uses original BankRanking copy and original/local graphics.
+Wydanie: 20 października 2026 r. Statyczna strona HTML/CSS/JavaScript, bez zależności wymaganych na hostingu.
 
-Key homepage choices:
-- light-blue hero
-- account categories immediately visible
-- original composition of debit-card graphics using BankRanking's local bank logo assets
-- independent-comparison disclosure directly below the primary choices
-- featured current-account offers
-- editorial account insight
-- bank cards
-- account knowledge section
-- personal / 18–26 / 26+ / business account categories
-- simplified footer
+## Zawartość
 
-Important:
-- no USA
-- no mortgage / loans / insurance categories
-- no Google Translate popup
-- CNAME remains bankranking.eu
-- homepage styles are embedded directly in index.html so the page does not collapse into unstyled text if an old CSS asset is cached incorrectly.
+- `/es/banking/`: porównanie sześciu konkretnych kont osobistych w Hiszpanii, z opłatami, warunkami, źródłami, datą sprawdzenia i porównaniem do trzech kont.
+- `/espanol/`: hiszpańska strona wejściowa, poradniki, metodologia, kontakt oraz informacje o afiliacji, prywatności i cookies.
+- Pozostałe kategorie ES oraz listy PL/IT są oznaczone jako katalogi referencyjne. Starsze dane PL/IT pochodzą z 13 sierpnia 2026 r.; zmiana kodu nie stanowi ponownej weryfikacji tych taryf.
+- Analityka GA4 uruchamia się po zgodzie. Ustawienia są dostępne z przycisku cookies; newsletter Brevo ma osobną zgodę.
 
-## Homepage editorial promotion feature
-The former three-card "Worth checking now" section has been replaced by a single editorial "Did you know?" feature about BBVA Spain's current Young Account flight promotion.
-The visual uses an original boarding-pass composition and keeps the terms deliberately short.
-Source: official BBVA Spain Young Account page, checked 13 Aug 2026.
+## Aktualizacja danych
 
+1. Edytuj źródłowy plik `assets/data/multi-ranking-data.json`.
+2. Sprawdź zmieniane warunki w oficjalnych dokumentach banku. Uzupełnij właściwe źródła i rzeczywistą datę weryfikacji produktu. Brak danych zapisuj jako `null`, nie jako zero.
+3. W katalogu głównym tej strony uruchom:
 
-## Knowledge hub section
-Homepage now includes a bank.nl-inspired knowledge/newsroom section:
-- large left editorial column with three article-style entries
-- right column with two featured/sponsored-style cards
-- adapted and original text in EN / ES / DE / FR
-- implemented as a homepage replacement for the former simple Guides section
+   ```text
+   node scripts/build-data.cjs
+   ```
 
-## Insights newsroom update
-- Removed the explanatory Knowledge Hub subtitle entirely.
-- Section label is now simply “Insights”.
-- Editorial cards now use current/recent banking stories inspired by Bank.nl:
-  ABN AMRO/NIBC, GoDutch/Messi/Mastercard and payment-fraud growth.
-- Featured cards use current Bank.nl product information for Raisin RenteBoost and Bunq savings.
+4. Skrypt odtwarza `assets/js/multi-ranking-data.js` oraz trzy strony `/es/{banking,saving,investing}/`. Wgraj również te wygenerowane pliki.
+5. Sprawdź zmienione konto, filtry, porównanie oraz źródła przed publikacją.
 
+Node jest potrzebny do przebudowy po edycji danych, nie do wyświetlania strony na hostingu. Pliku `assets/js/multi-ranking-data.js` nie należy edytować ręcznie.
 
-## Expanded footer and product architecture
-- Footer rebuilt in a Bank.nl-inspired structure (without the Netherlands-bank column).
-- New top-level areas: bank accounts, savings/deposits and investing.
-- No loan / mortgage / credit section added.
-- Added specific account types: business, joint, student, child and youth.
-- Added savings: savings accounts, fixed-term deposits, business savings, child savings and rate overview.
-- Added investing: investment accounts, funds, managed, self-directed, retirement, business investing and broker overview.
-- Added Research / Services / Disclaimer / Contact information pages.
-- Added the disclaimer: BankRanking is not a bank or financial institution.
-- Generated 92 supporting category/info pages across EN/ES/DE/FR paths.
+Promocje mają osobne terminy ważności. Interfejs ocenia je według daty w strefie Europe/Madrid i wygasza po zapisanym terminie. Kwoty promocyjne nie są odejmowane od kosztu utrzymania konta. Koszt podstawowy obejmuje tylko wyraźnie wskazane składniki; opcjonalna karta fizyczna i operacje są opisane osobno.
 
+## Linki i publikacja
 
-## V7 multi-category engine
-- 8 country ranking pages, each with 16 category views (128 combinations).
-- Personal preserves the existing 18–26 / 26+ score logic and existing product dataset.
-- Banking: personal, business, joint, student, youth, children.
-- Saving: savings, fixed-term deposits, business savings, child savings.
-- Investing: investment account, funds, managed, self-directed, retirement, business investing.
-- Investing defaults to Banks & bank groups; Specialist / non-bank market is a separate toggle.
-- Former footer placeholders are now category hubs linking to the 3 live country rankings: Poland, Italy and Spain.
-- /research-sources/ documents the research-source directory.
-- Research snapshot: 13 August 2026.
+Linki prowadzą do oficjalnych stron banków, dopóki wydawca nie otrzyma zatwierdzonego linku konkretnej kampanii. Po indywidualnej akceptacji można uzupełnić `affiliateUrl` odpowiedniego produktu i ponownie wykonać przebudowę. Należy zachować oficjalne źródła i daty sprawdzenia.
 
+Na hosting publikuje się zawartość tego katalogu: `index.html`, `assets/`, podkatalogi i pozostałe pliki. Zachowaj strukturę adresów oraz istniejący `CNAME`, jeśli domena nadal korzysta z tej konfiguracji.
 
-## V8 three-vertical architecture
-Each country is now split into /banking/, /saving/, and /investing/. The old /COUNTRY/ page is a simple 3-card hub. /COUNTRY/banks/ redirects to /COUNTRY/banking/. Ranking typography and spacing were enlarged.
-
-
-## V17 — current market scope
-Updated 20 September 2026.
-
-- Current public market coverage is limited to Poland, Italy and Spain.
-- Each market has Banking / Saving / Investing verticals.
-- Country navigation and ranking data are restricted to these three markets.
-- Personal, business, joint, student, youth, child, savings and investment category hubs link only to the current market pages.
-- Investment rankings retain Banks & bank groups as the default and Specialist market as the second view where available.
-- Research-source and methodology pages document the comparison approach and evidence hierarchy.
-
-
-## V32 — Research methodology 2.0
-Expanded /methodology/ into a public research protocol covering scope, evidence grades, data normalisation, category-specific decision rules, promotions, robustness, commercial independence, freshness, corrections, limitations and a 30+ source reference library. Methodology effective 13 August 2026.
+Kod i dane przygotowano do publikacji; dostarczenie paczki nie oznacza jej automatycznego opublikowania ani akceptacji Kwanko. Przyjęcie do sieci i dopuszczenie do kampanii banku są osobnymi decyzjami.
