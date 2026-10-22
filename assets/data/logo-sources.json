@@ -1,0 +1,356 @@
+[
+  {
+    "provider": "PKO Bank Polski",
+    "domain": "pkobp.pl",
+    "localAsset": "/assets/logos/complete/pkobp-pl.svg",
+    "source": "https://www.pkobp.pl/api/public/63086f97-c7b3-436b-a060-a2947f8713f4.svg"
+  },
+  {
+    "provider": "Bank Pekao",
+    "domain": "pekao.com.pl",
+    "localAsset": "/assets/real-logos/pekao-full.webp",
+    "source": "https://www.pekao.com.pl"
+  },
+  {
+    "provider": "Erste Bank Polska",
+    "domain": "erste.pl",
+    "localAsset": "/assets/logos/complete/erste-pl.svg",
+    "source": "https://www.erste.pl/_fileserver/time20260330083631/item/1525064"
+  },
+  {
+    "provider": "ING Bank Śląski",
+    "domain": "ing.pl",
+    "localAsset": "/assets/real-logos/ing-full.webp",
+    "source": "https://www.ing.pl"
+  },
+  {
+    "provider": "Bank Millennium",
+    "domain": "bankmillennium.pl",
+    "localAsset": "/assets/logos/verified/millennium.svg",
+    "source": "https://www.bankmillennium.pl"
+  },
+  {
+    "provider": "mBank",
+    "domain": "mbank.pl",
+    "localAsset": "/assets/logos/verified/mbank.svg",
+    "source": "https://www.mbank.pl"
+  },
+  {
+    "provider": "Alior Bank",
+    "domain": "aliorbank.pl",
+    "localAsset": "/assets/logos/complete/aliorbank-pl.png",
+    "source": "https://www.aliorbank.pl/.resources/common-module/webresources/public/logo.png"
+  },
+  {
+    "provider": "BNP Paribas Bank Polska",
+    "domain": "bnpparibas.pl",
+    "localAsset": "/assets/logos/verified/bnp-paribas.png",
+    "source": "https://www.bnpparibas.pl"
+  },
+  {
+    "provider": "Credit Agricole Bank Polska",
+    "domain": "credit-agricole.pl",
+    "localAsset": "/assets/logos/verified/credit-agricole.svg",
+    "source": "https://www.credit-agricole.pl"
+  },
+  {
+    "provider": "VeloBank",
+    "domain": "velobank.pl",
+    "localAsset": "/assets/logos/complete/velobank.svg",
+    "source": "https://www.velobank.pl/themes/velobank/images/logo-velobank-green.svg"
+  },
+  {
+    "provider": "SGB Bank / SGB cooperative network",
+    "domain": "sgb.pl",
+    "localAsset": "/assets/real-logos/sgb-full.png",
+    "source": "https://www.sgb.pl"
+  },
+  {
+    "provider": "Bank Pocztowy",
+    "domain": "pocztowy.pl",
+    "localAsset": "/assets/logos/complete/pocztowy-pl.svg",
+    "source": "https://www.pocztowy.pl/img/logo_pocztowy.svg"
+  },
+  {
+    "provider": "Toyota Bank",
+    "domain": "toyotabank.pl",
+    "localAsset": "/assets/logos/complete/toyotabank-pl.svg",
+    "source": "https://www.toyotabank.pl/themes/custom/tbp/static/img/layout/logo.svg"
+  },
+  {
+    "provider": "Nest Bank",
+    "domain": "nestbank.pl",
+    "localAsset": "/assets/logos/complete/nestbank-pl.svg",
+    "source": "https://nestbank.pl/images/gen/3194205_logoviolet.svg"
+  },
+  {
+    "provider": "XTB",
+    "domain": "xtb.com",
+    "localAsset": "/assets/logos/complete/xtb-com.svg",
+    "source": "https://xas-cdn.xtb.com/build/twigImages/svg-icons/logo/logo_xtb.svg"
+  },
+  {
+    "provider": "Interactive Brokers",
+    "domain": "interactivebrokers.com",
+    "localAsset": "/assets/logos/complete/interactivebrokers-com.svg",
+    "source": "https://www.interactivebrokers.com/images/common/logos/ibkr/interactive-brokers.svg"
+  },
+  {
+    "provider": "Trading 212",
+    "domain": "trading212.com",
+    "localAsset": "/assets/logos/complete/trading212-current.svg",
+    "source": "https://helpcentre.trading212.com/hc/theming_assets/01KFNC7GP8W43DX6A2V1CNNGJ1"
+  },
+  {
+    "provider": "inPZU",
+    "domain": "inpzu.pl",
+    "localAsset": "/assets/logos/complete/inpzu-pl.svg",
+    "source": "https://in.pzu.pl/_fileserver/time20250708085243/item/1504180"
+  },
+  {
+    "provider": "Finax",
+    "domain": "finax.eu",
+    "localAsset": "/assets/logos/complete/finax-eu.svg",
+    "source": "https://www.finax.eu/themes/finax-rebranding/assets/images/logo_black.svg?1792608165"
+  },
+  {
+    "provider": "PZU TFI",
+    "domain": "pzu.pl",
+    "localAsset": "/assets/logos/complete/pzu-pl.svg",
+    "source": "https://www.pzu.pl/_cms-img/time20261020121959/pzu/pzu-logo.svg"
+  },
+  {
+    "provider": "Nationale-Nederlanden",
+    "domain": "nn.pl",
+    "localAsset": "/assets/logos/complete/nn-pl.svg",
+    "source": "https://www.nn.pl/"
+  },
+  {
+    "provider": "Intesa Sanpaolo",
+    "domain": "intesasanpaolo.com",
+    "localAsset": "/assets/logos/complete/intesasanpaolo-com.png",
+    "source": "https://www.intesasanpaolo.com/content/dam/vetrina/design/loghi/header-e-footer/logo-intesasanpaolo.png"
+  },
+  {
+    "provider": "UniCredit",
+    "domain": "unicredit.it",
+    "localAsset": "/assets/logos/complete/unicredit-it.png",
+    "source": "https://www.unicredit.it/etc/designs/ucpublic/it/img/logoHiRes.png"
+  },
+  {
+    "provider": "BPER Banca",
+    "domain": "bper.it",
+    "localAsset": "/assets/logos/complete/bper-it.svg",
+    "source": "https://www.bper.it/o/bper-2026-theme/images/BPER_Logo_Verde_SITOCOMM.svg"
+  },
+  {
+    "provider": "Banco BPM",
+    "domain": "bancobpm.it",
+    "localAsset": "/assets/logos/complete/bancobpm-it.svg",
+    "source": "https://www.bancobpm.it/media/2022/05/logoBancoBPM.svg"
+  },
+  {
+    "provider": "Banca Monte dei Paschi di Siena",
+    "domain": "mps.it",
+    "localAsset": "/assets/logos/complete/mps-it.png",
+    "source": "https://www.mps.it/includes/v2021/img/logo-mps.png"
+  },
+  {
+    "provider": "Crédit Agricole Italia",
+    "domain": "credit-agricole.it",
+    "localAsset": "/assets/logos/verified/credit-agricole.svg",
+    "source": "https://www.credit-agricole.it"
+  },
+  {
+    "provider": "BNL BNP Paribas",
+    "domain": "bnl.it",
+    "localAsset": "/assets/logos/verified/bnp-paribas.png",
+    "source": "https://www.bnl.it"
+  },
+  {
+    "provider": "BancoPosta",
+    "domain": "poste.it",
+    "localAsset": "/assets/logos/complete/poste-it.webp",
+    "source": "https://www.media.poste.it/03827cbe-81a9-4d31-be55-bab5c161f851/lg/webp/logo-poste-italianei@2x"
+  },
+  {
+    "provider": "FinecoBank",
+    "domain": "finecobank.com",
+    "localAsset": "/assets/logos/complete/finecobank-com.svg",
+    "source": "https://images.finecobank.com/common-global/img/logo/logo-fineco.svg"
+  },
+  {
+    "provider": "Banca Sella",
+    "domain": "sella.it",
+    "localAsset": "/assets/logos/complete/sella-it.svg",
+    "source": "https://www.sella.it/o/sella-theme/images/logo-sella.svg"
+  },
+  {
+    "provider": "ING Italia",
+    "domain": "ing.it",
+    "localAsset": "/assets/real-logos/ing-full.webp",
+    "source": "https://www.ing.it"
+  },
+  {
+    "provider": "isybank",
+    "domain": "isybank.com",
+    "localAsset": "/assets/logos/complete/isybank-com.png",
+    "source": "https://www.isybank.com/content/dam/isybank/images/home/header/logo-isybank.png"
+  },
+  {
+    "provider": "BBVA",
+    "domain": "bbva.it",
+    "localAsset": "/assets/logos/verified/bbva.svg",
+    "source": "https://www.bbva.it"
+  },
+  {
+    "provider": "Banca Progetto",
+    "domain": "bancaprogetto.it",
+    "localAsset": "/assets/logos/complete/bancaprogetto-it.svg",
+    "source": "https://dev-website.bancaprogetto.it/logo_bp.svg"
+  },
+  {
+    "provider": "Cherry Bank",
+    "domain": "cherrybank.it",
+    "localAsset": "/assets/logos/complete/cherrybank-it.png",
+    "source": "https://contoonline.cherrybank.it/home-banking-ng/public/brand/03365/default/asset/images/logo.png"
+  },
+  {
+    "provider": "Directa SIM",
+    "domain": "directa.it",
+    "localAsset": "/assets/logos/complete/directa-it.svg",
+    "source": "https://www.directa.it/api/media/file/Logo-Blu.svg"
+  },
+  {
+    "provider": "DEGIRO",
+    "domain": "degiro.it",
+    "localAsset": "/assets/logos/complete/degiro-it.svg",
+    "source": "https://www.degiro.com/assets/images/uk-ie-ch/global/logo.svg"
+  },
+  {
+    "provider": "Moneyfarm",
+    "domain": "moneyfarm.com",
+    "localAsset": "/assets/logos/complete/moneyfarm-com.svg",
+    "source": "https://www.moneyfarm.com/uk/images/moneyfarm-logotype-2023.svg"
+  },
+  {
+    "provider": "Euclidea",
+    "domain": "euclidea.com",
+    "localAsset": "/assets/logos/complete/euclidea-com.svg",
+    "source": "https://www.furstenbergsim.eu/_nuxt/logo.70ad79ff.svg"
+  },
+  {
+    "provider": "Tinaba",
+    "domain": "tinaba.bancaprofilo.it",
+    "localAsset": "/assets/logos/complete/tinaba-bancaprofilo-it.svg",
+    "source": "https://tinaba.bancaprofilo.it/wp-content/uploads/2026/08/logo_bianco-2.svg"
+  },
+  {
+    "provider": "Allianz",
+    "domain": "allianz.it",
+    "localAsset": "/assets/logos/complete/allianz-it.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Allianz_logo.svg",
+    "credit": "Allianz"
+  },
+  {
+    "provider": "Amundi",
+    "domain": "amundi.it",
+    "localAsset": "/assets/logos/complete/amundi-it.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Amundi_logo.svg"
+  },
+  {
+    "provider": "Banco Sabadell",
+    "domain": "bancsabadell.com",
+    "localAsset": "/assets/logos/verified/sabadell.svg",
+    "source": "https://www.bancsabadell.com"
+  },
+  {
+    "provider": "N26",
+    "domain": "n26.com",
+    "localAsset": "/assets/logos/verified/n26.svg",
+    "source": "https://www.n26.com"
+  },
+  {
+    "provider": "BBVA",
+    "domain": "bbva.es",
+    "localAsset": "/assets/logos/verified/bbva.svg",
+    "source": "https://www.bbva.es"
+  },
+  {
+    "provider": "Openbank",
+    "domain": "openbank.es",
+    "localAsset": "/assets/logos/verified/openbank.svg",
+    "source": "https://www.openbank.es"
+  },
+  {
+    "provider": "Bankinter",
+    "domain": "bankinter.com",
+    "localAsset": "/assets/logos/verified/bankinter.svg",
+    "source": "https://www.bankinter.com"
+  },
+  {
+    "provider": "Banco Santander",
+    "domain": "bancosantander.es",
+    "localAsset": "/assets/logos/verified/santander.svg",
+    "source": "https://www.bancosantander.es"
+  },
+  {
+    "provider": "ING España",
+    "domain": "ing.es",
+    "localAsset": "/assets/real-logos/ing-full.webp",
+    "source": "https://www.ing.es"
+  },
+  {
+    "provider": "CaixaBank · imagin",
+    "domain": "caixabank.es",
+    "localAsset": "/assets/logos/verified/caixabank.svg",
+    "source": "https://www.caixabank.es"
+  },
+  {
+    "provider": "ABANCA",
+    "domain": "abanca.com",
+    "localAsset": "/assets/logos/verified/abanca.svg",
+    "source": "https://www.abanca.com"
+  },
+  {
+    "provider": "Unicaja Banco",
+    "domain": "unicajabanco.es",
+    "localAsset": "/assets/logos/complete/unicajabanco-es.svg",
+    "source": "https://www.unicajabanco.es/es/particulares"
+  },
+  {
+    "provider": "Renault Bank",
+    "domain": "renaultbank.es",
+    "localAsset": "/assets/logos/complete/renaultbank-es.svg",
+    "source": "https://renaultbank.es/wp-content/themes/templatePLG/dist/images/logo-renault-white.svg"
+  },
+  {
+    "provider": "DEGIRO",
+    "domain": "degiro.es",
+    "localAsset": "/assets/logos/complete/degiro-es.svg",
+    "source": "https://www.degiro.com/assets/images/uk-ie-ch/global/logo.svg"
+  },
+  {
+    "provider": "Indexa Capital",
+    "domain": "indexacapital.com",
+    "localAsset": "/assets/logos/complete/indexacapital-com.svg",
+    "source": "https://cdn.indexacapital.com/images/89435c8.svg"
+  },
+  {
+    "provider": "Finizens",
+    "domain": "finizens.com",
+    "localAsset": "/assets/logos/complete/finizens-com.svg",
+    "source": "https://finizens.com/images/logos/finizens.svg"
+  },
+  {
+    "provider": "inbestMe",
+    "domain": "inbestme.com",
+    "localAsset": "/assets/logos/complete/inbestme-com.svg",
+    "source": "https://www.inbestme.com/es/wp-content/uploads/sites/3/2023/03/Logo_inbestMe_principal_positiu_web.svg"
+  },
+  {
+    "domain": "imagin",
+    "localAsset": "/assets/logos/complete/imagin.svg",
+    "source": "https://www.imagin.com/documents/554420/1009965/logo-imagin_56x60.svg/f722a67f-cc3b-c4d5-848b-e55c934337f8?t=1740054664584"
+  }
+]

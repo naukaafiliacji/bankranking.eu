@@ -11,7 +11,7 @@
     it:{title:'Le tue preferenze di privacy',description:'La memoria necessaria ricorda la tua scelta. Con il tuo consenso, Google Analytics ci aiuta a comprendere l’uso del sito. L’analisi resta disattivata finché non la accetti.',accept:'Accetta analisi',reject:'Rifiuta analisi',settings:'Impostazioni',save:'Salva preferenze',close:'Chiudi',essential:'Preferenze necessarie',required:'Sempre attive: ricordano la tua scelta per 180 giorni.',analytics:'Analisi facoltativa',analyticsText:'Google Analytics misura visite e interazioni. Questa opzione è disattivata per impostazione predefinita.',policy:'Informativa sui cookie',privacy:'Privacy',saved:'Le preferenze sono state salvate.',settingsTitle:'Preferenze di privacy',stored:'La scelta viene salvata in questo browser per 180 giorni. Puoi modificarla in qualsiasi momento.'}
   };
   const path=location.pathname;
-  const language=/^\/(es|espanol)(\/|$)/.test(path)?'es':/^\/(pl|polski)(\/|$)/.test(path)?'pl':/^\/(it|italiano)(\/|$)/.test(path)?'it':document.documentElement.lang.split('-')[0];
+  const language=document.documentElement.lang.split('-')[0]||'en';
   const t=translations[language]||translations.en,policyUrl=language==='es'?'/espanol/cookies/':'/cookies/',privacyUrl=language==='es'?'/espanol/privacidad/':'/privacy/';
   function valid(v){return v&&v.version===2&&v.essential===true&&typeof v.analytics==='boolean'&&Number.isFinite(v.savedAt)&&Number.isFinite(v.expiresAt)&&v.savedAt<=Date.now()+60000&&v.expiresAt>Date.now()&&v.expiresAt-v.savedAt===TTL;}
   function read(){if(valid(memory))return memory;try{const v=JSON.parse(localStorage.getItem(KEY)||'null');if(valid(v))return v;}catch(_){}return null;}

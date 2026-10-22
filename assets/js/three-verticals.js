@@ -1,13 +1,13 @@
 (function(){
 'use strict';
 const D=window.BANKRANKING_MULTI,F=window.BankRankingFees,b=document.body,m=b.dataset.market,g=b.dataset.group,list=document.getElementById('rank-list');if(!D?.markets?.[m]||!F||!list)return;
-const pl=m==='pl',es=m==='es',t=(a,c,e)=>pl?a:es?c:e,w=F.words[F.language(m)],categories=D.categories,ranking=D.markets[m].rankings;
+const pl=false,es=m==='es',t=(a,c,e)=>e,w=F.words[F.language(m)],categories=D.categories,ranking=D.markets[m].rankings;
 const allowed=JSON.parse(b.dataset.categories),params=new URLSearchParams(location.search);let cat=allowed.includes(params.get('cat'))?params.get('cat'):allowed[0],mode='bank',visible=[],selected=new Map();
 const get=id=>document.getElementById(id),search=get('bank-search'),sort=get('ranking-sort'),free=get('free-only'),promo=get('promo-only');
 if(get('age-filter'))get('age-filter').hidden=true;
 let age=null,payroll=null;
 if(es&&g==='banking'){
- const block=document.createElement('div');block.className='filter-section';block.innerHTML='<label class="filter-label" for="fee-age">Edad (opcional)</label><input id="fee-age" type="number" min="18" max="110" placeholder="Cualquiera"><label class="filter-label" for="fee-payroll">Nómina obligatoria</label><select id="fee-payroll"><option value="all">Cualquier requisito</option><option value="no">Sin nómina</option><option value="yes">Con nómina</option></select><small>La edad filtra solo requisitos comprobados para cuentas personales.</small>';
+ const block=document.createElement('div');block.className='filter-section';block.innerHTML='<label class="filter-label" for="fee-age">Age (optional)</label><input id="fee-age" type="number" min="18" max="110" placeholder="Any"><label class="filter-label" for="fee-payroll">Salary requirement</label><select id="fee-payroll"><option value="all">Any requirement</option><option value="no">No salary required</option><option value="yes">Salary required</option></select><small>Age filters verified personal-account requirements only.</small>';
  get('ranking-sort').closest('.filter-section').after(block);age=get('fee-age');payroll=get('fee-payroll');
 }
 if(search&&params.get('bank'))search.value=params.get('bank');
@@ -17,7 +17,7 @@ function key(x){return x.id||x.provider+'|'+x.product}
 function render(){
  if(get('fee-status'))get('fee-status').textContent='';
  document.querySelectorAll('.cat-btn').forEach(x=>{x.classList.toggle('active',x.dataset.cat===cat);x.setAttribute('aria-pressed',String(x.dataset.cat===cat))});document.querySelector('.provider-toggle')?.classList.toggle('visible',g==='investing');document.querySelectorAll('.provider-btn').forEach(x=>x.classList.toggle('active',x.dataset.mode===mode));
- const query=(search?.value||'').trim().toLocaleLowerCase();visible=raw().filter(x=>(!query||(x.provider+' '+x.product).toLocaleLowerCase().includes(query))&&(!free?.checked||(F.annual(x)===0&&x.costs?.conditional===false))&&(!promo?.checked||F.activeBonus(x,today())>0)&&(cat!=='personal'||!age?.value||(Number.isFinite(x.minAge)&&Number(age.value)>=x.minAge&&(!Number.isFinite(x.maxAge)||Number(age.value)<=x.maxAge)))&&(cat!=='personal'||!payroll||payroll.value==='all'||(payroll.value==='no'?x.payrollRequired===false:x.payrollRequired===true)));
+ const query=(search?.value||'').trim().toLocaleLowerCase();visible=raw().filter(x=>(!query||(x.provider+' '+x.product).toLocaleLowerCase().includes(query))&&(!free?.checked||(F.annual(x)===0&&x.costs?.conditional===false))&&(!promo?.checked||F.activeBonus(x,today())>0||F.activeOffer(x,today()))&&(cat!=='personal'||!age?.value||(Number.isFinite(x.minAge)&&Number(age.value)>=x.minAge&&(!Number.isFinite(x.maxAge)||Number(age.value)<=x.maxAge)))&&(cat!=='personal'||!payroll||payroll.value==='all'||(payroll.value==='no'?x.payrollRequired===false:x.payrollRequired===true)));
  visible.sort((a,c)=>{if(sort?.value==='fee'){const av=F.annual(a),cv=F.annual(c);if(av!==cv)return (av??Infinity)-(cv??Infinity)}if(sort?.value==='bonus'){const diff=F.activeBonus(c,today())-F.activeBonus(a,today());if(diff)return diff}return a.provider.localeCompare(c.provider,m)});
  get('filter-count').textContent=visible.length;get('ranking-title').textContent=t('Porównaj koszty','Compara los costes','Compare running costs');
  const checked=visible.filter(x=>x.costs?.checkedAt).length;get('ranking-sub').textContent=t(`${visible.length} ofert i wpisów · ${checked} z potwierdzonymi opłatami. Daty i źródła w szczegółach.`,`${visible.length} productos y entidades · ${checked} con comisiones comprobadas. Fechas y fuentes en cada ficha.`,`${visible.length} products and providers · ${checked} with checked fees. Dates and sources in each entry.`);
