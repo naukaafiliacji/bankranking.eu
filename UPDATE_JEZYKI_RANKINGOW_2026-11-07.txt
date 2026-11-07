@@ -1,0 +1,15 @@
+Aktualizacja: przełącznik języka rankingów (2026-11-07)
+
+- Nowy wybór języka EN / PL / ES / IT zamiast wyboru kraju w prawym górnym rogu wszystkich rankingów.
+- Rynek pozostaje w ścieżce URL (/pl/, /es/, /it/) i nie zmienia się przy wyborze języka.
+- Język jest przechowywany w parametrze ?lang=pl/es/it/en; zachowuje bieżący parametr kategorii ?cat=.
+- Zmiany objęły banking, saving, investing, wrześniową podstronę i linki z wielojęzycznych stron głównych.
+- Przetłumaczono interfejs, nawigację, filtry, komunikaty, zestawienia, etykiety kart i część powtarzalnych opisów.
+- Nazwy banków i produktów oraz szczegółowe, bankowe warunki źródłowe są zachowane w oryginalnym brzmieniu, jeśli nie mają osobnego bezpiecznego tłumaczenia.
+- Nie zmieniono danych finansowych, pozycji banków ani linków afiliacyjnych.
+
+Przykłady:
+https://bankranking.eu/es/banking/?lang=pl
+https://bankranking.eu/pl/saving/?lang=es
+https://bankranking.eu/it/investing/?lang=pl
+https://bankranking.eu/es/banking/?cat=business&lang=it

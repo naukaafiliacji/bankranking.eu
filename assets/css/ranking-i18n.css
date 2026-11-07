@@ -1,0 +1,60 @@
+/* Same HTML/CSS design as the homepage language selector; applies to all rank pages. */
+.navright {margin-left:auto}
+.lang-menu {position:relative}
+.lang-menu summary {list-style:none;cursor:pointer;display:flex;align-items:center;gap:7px;border:1px solid #d3dee8;border-radius:7px;padding:8px 10px;color:#586f83;font-size:12px;font-weight:750;background:white}
+.lang-menu summary::-webkit-details-marker {display:none}
+.lang-chevron {font-size:10px;color:#94a2ae}
+.lang-pop {position:absolute;right:0;top:calc(100% + 7px);width:170px;background:white;border:1px solid var(--line);border-radius:8px;box-shadow:0 14px 35px rgba(26,55,81,.14);padding:6px;z-index:80}
+.lang-pop a {display:flex;align-items:center;justify-content:space-between;padding:9px 10px;border-radius:6px;font-size:12px;color:#445f76}
+.lang-pop a:hover {background:#f1f6fa}
+.lang-pop b {font-size:10px;color:#8ca0b0}
+@media (max-width:620px) {.lang-menu summary {padding:8px}}
+.lang-menu summary {border:0!important;background:transparent!important;padding:7px 4px!important;font-size:12px!important;color:#536d82!important;gap:6px!important}
+.lang-menu summary:hover {color:#153f67!important}
+.lang-pop {width:164px!important}
+.lang-pop a {justify-content:flex-start!important;gap:9px!important;font-size:12px!important}
+.lang-pop .flag {font-size:16px;line-height:1}
+.lang-pop .lang-code {margin-left:auto;color:#a0adb7;font-size:9px;font-weight:800}
+.lang-pop a, .lang-menu summary span.flag-wrap {display:inline-flex;align-items:center;gap:8px}
+.lang-menu {position:relative}
+.lang-menu summary {display:inline-flex!important;
+  align-items:center!important;
+  gap:7px!important;
+  white-space:nowrap!important;
+  cursor:pointer!important;}
+.lang-pop {right:0!important;
+  left:auto!important;
+  width:142px!important;
+  min-width:142px!important;
+  padding:5px!important;}
+.lang-pop a {width:100%!important;
+  display:grid!important;
+  grid-template-columns:20px minmax(0,1fr)!important;
+  align-items:center!important;
+  justify-content:initial!important;
+  gap:8px!important;
+  padding:8px 9px!important;
+  text-align:left!important;
+  border-radius:6px!important;
+  font-size:12px!important;}
+.lang-pop a .site-flag {margin-right:0!important;
+  width:18px!important;
+  height:14px!important;}
+.lang-pop a span {min-width:0!important;}
+.flag-wrap .site-flag {margin-right:0!important}
+.site-flag {display:inline-block!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  vertical-align:-2px!important;
+  border-radius:2px!important;
+  box-shadow:0 0 0 1px rgba(20,40,60,.10)!important;
+  flex:0 0 auto!important;
+  margin-right:7px!important;
+  background:#fff!important;}
+.site-flag-sm {width:18px!important;height:14px!important}
+.site-flag-lg {width:24px!important;height:18px!important}
+.flag-wrap, .lang-pop a {display:inline-flex!important;
+  align-items:center!important;}
+.lang-menu{margin-left:auto;z-index:60}
+.lang-menu .lang-pop{z-index:100}
+.lang-menu summary:focus-visible,.lang-menu .lang-pop a:focus-visible{outline:2px solid #3f7baf;outline-offset:2px}
