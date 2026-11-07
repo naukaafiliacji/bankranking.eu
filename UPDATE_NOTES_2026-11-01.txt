@@ -1,0 +1,26 @@
+BankRanking Europe — update 2026-11-01
+
+1. Homepage
+- HOT OFFER replaced with current BBVA Spain Cuenta Online Sin Comisiones promotion.
+- PLAN1060, advertised up to EUR 1,060, application deadline shown as 10 Nov 2026.
+- Localized homepage versions PL/ES/IT updated from the same current source.
+
+2. Banking news
+- Added 3 sourced articles dated 29–30 Oct 2026.
+- News archive now contains 18 articles.
+- Homepage banking-news block now points to the latest three items.
+- ECB rates shown on homepage: 2.50% deposit facility, 2.65% main refinancing, 2.90% marginal lending.
+
+3. Category content
+- Expanded 19 root category/info pages with comparison criteria, questions, risks, product-structure notes and methodology links.
+- Expanded matching Polish, Spanish and Italian category pages (57 localized pages total).
+- Savings-family pages include an EU deposit-protection reference.
+
+4. Data integrity
+- Existing product rates/fees marked Not verified were not invented or overwritten.
+- Missing source-backed financial values should be verified provider by provider before being added.
+
+5. Build sources
+- assets/data/news.json updated.
+- scripts/build-news.cjs and scripts/home-translations.json updated.
+- Localized homepages regenerated with scripts/build-home-locales.cjs.

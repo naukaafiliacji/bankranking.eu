@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-10-21",
+  "preparedAt": "2026-11-01",
   "articles": [
     {
       "slug": "eba-taxonomy-disclosures-july-2026",
@@ -224,6 +224,51 @@
         "The announcement schedules dual supervision from 12 November 2026. Certain responsibilities, including areas concerning reserves, liquidity and redemption planning, move to the EBA, while other areas remain with France's ACPR.",
         "A significant-token classification describes regulatory treatment. It should not be presented as a recommendation to buy the token or as evidence that it is interchangeable with a euro current account.",
         "Our view: customers should identify exactly what they hold, who owes them money and which terms apply before comparing digital-finance products. A banking app can contain different kinds of products. A supervisory milestone is a reason to read the details, rather than a shortcut around understanding the product and its risks."
+      ]
+    },
+    {
+      "slug": "digital-euro-network-providers-october-2026",
+      "title": "ECB picks network providers for the digital euro infrastructure",
+      "eventDate": "2026-10-30",
+      "category": "Payments",
+      "source": "https://www.ecb.europa.eu/press/intro/news/html/ecb.mipnews261030.en.html",
+      "sourceName": "ECB network service provider announcement, 30 October 2026",
+      "summary": "Nexi with Deutsche Telekom and a Telefónica-led group were selected to provide connectivity for the digital euro platform.",
+      "paragraphs": [
+        "The European Central Bank announced on 30 October that it had selected two network service provider groups for the digital euro service platform. The first combines Nexi Payments and Deutsche Telekom Business Solutions; the second combines Telefónica de España, Telefónica Global Solutions and Indra.",
+        "The connectivity contracts are part of preparation for the digital euro pilot and for a possible future issuance. The first-ranked provider's contract already covers the connectivity needed for the pilot, while the second provider is due to start in May 2027. The ECB says both groups should be ready from 2029 for a potential full service, subject to a future issuance decision.",
+        "For bank customers, this is infrastructure news rather than a new account that can be opened today. Commercial banks and other payment service providers would still be the customer-facing layer if a digital euro is eventually issued.",
+        "Our view: the selection is a concrete sign that the project is moving from design work into operational preparation. It does not change the terms of today's current accounts, cards or savings products, so customers should continue to compare those products on their existing fees, access and protections."
+      ]
+    },
+    {
+      "slug": "intesa-mps-offer-goes-ahead-october-2026",
+      "title": "Intesa Sanpaolo says its offer for Monte dei Paschi will go ahead",
+      "eventDate": "2026-10-30",
+      "category": "Bank consolidation",
+      "source": "https://group.intesasanpaolo.com/en/investor-relations/press-releases/2026/10/202610-cs-eng",
+      "sourceName": "Intesa Sanpaolo transaction update, 30 October 2026",
+      "summary": "The Italian banking group confirmed that its public tender and exchange offer for MPS will proceed after the target's shareholder meeting.",
+      "paragraphs": [
+        "Intesa Sanpaolo announced on 30 October that its voluntary public tender and exchange offer for Banca Monte dei Paschi di Siena would proceed. The update followed MPS's shareholder meeting on 29 October and a series of regulatory approvals obtained earlier in the week.",
+        "The transaction is still a corporate process rather than a completed integration of the two retail banks. Intesa's announcement explains that the offer continues under the applicable Italian takeover rules and that further steps remain before control is completed.",
+        "For retail customers, a takeover announcement does not by itself change an account tariff, deposit rate or branch arrangement. Any customer-facing changes would need to be communicated through the banks' normal product and contractual channels.",
+        "Our view: the transaction is worth following because it could reshape one of Europe's largest national banking markets. Until there are concrete product changes, BankRanking will keep comparing Intesa and MPS products on the terms actually published for customers rather than assuming future synergies."
+      ]
+    },
+    {
+      "slug": "ecb-rates-unchanged-october-2026",
+      "title": "ECB keeps key interest rates unchanged after September increase",
+      "eventDate": "2026-10-29",
+      "category": "Monetary policy",
+      "source": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html",
+      "sourceName": "ECB monetary policy decision, 29 October 2026",
+      "summary": "The deposit facility remains at 2.50%, with the main refinancing rate at 2.65% and the marginal lending rate at 2.90%.",
+      "paragraphs": [
+        "The ECB Governing Council left its three key policy rates unchanged on 29 October. The deposit facility rate remains 2.50%, the main refinancing operations rate 2.65% and the marginal lending facility rate 2.90%.",
+        "The decision followed the 25 basis-point increase announced in September. The ECB said higher energy prices were creating upside risks to inflation and downside risks to growth, while financing conditions had tightened.",
+        "Savings rates are not mechanically equal to the ECB deposit facility rate. Banks set retail deposit pricing according to their own funding needs, competition, product design and promotional strategy, so the spread between policy rates and a specific savings account can be substantial.",
+        "Our view: for savers, the useful response is to compare the actual annual rate, how long it lasts, balance caps and withdrawal conditions rather than infer a return from the policy rate alone. For borrowers, the policy environment can influence funding costs but does not determine the price of an individual loan."
       ]
     }
   ]

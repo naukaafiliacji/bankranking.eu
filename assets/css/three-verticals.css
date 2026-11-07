@@ -1609,3 +1609,57 @@
   .rank-cta a{width:100%!important;min-width:0!important}
   .analysis-toggle{justify-content:flex-start!important}
 }
+
+
+/* Welcome bonus eligibility note — shared across all live ranking pages */
+.welcome-bonus-notice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 20px;
+  padding: 13px 16px;
+  border: 1px solid #dbe8ee;
+  border-radius: 11px;
+  background: #f7fafc;
+  color: #546e80;
+}
+.welcome-bonus-notice__icon {
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+  display: grid;
+  place-items: center;
+  color: #207a66;
+  background: #e7f4ef;
+  border-radius: 9px;
+}
+.welcome-bonus-notice__copy {
+  min-width: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+.welcome-bonus-notice__copy strong {
+  color: #244860;
+  font-size: 12px;
+  font-weight: 800;
+}
+@media (max-width: 740px) {
+  .welcome-bonus-notice {
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    padding: 12px 13px;
+    border-radius: 9px;
+  }
+  .welcome-bonus-notice__icon {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
+  .welcome-bonus-notice__copy,
+  .welcome-bonus-notice__copy strong {
+    font-size: 11px;
+    line-height: 1.55;
+  }
+}
