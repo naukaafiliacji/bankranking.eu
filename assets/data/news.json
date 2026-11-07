@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-11-01",
+  "preparedAt": "2026-11-07",
   "articles": [
     {
       "slug": "eba-taxonomy-disclosures-july-2026",
@@ -269,6 +269,51 @@
         "The decision followed the 25 basis-point increase announced in September. The ECB said higher energy prices were creating upside risks to inflation and downside risks to growth, while financing conditions had tightened.",
         "Savings rates are not mechanically equal to the ECB deposit facility rate. Banks set retail deposit pricing according to their own funding needs, competition, product design and promotional strategy, so the spread between policy rates and a specific savings account can be substantial.",
         "Our view: for savers, the useful response is to compare the actual annual rate, how long it lasts, balance caps and withdrawal conditions rather than infer a return from the policy rate alone. For borrowers, the policy environment can influence funding costs but does not determine the price of an individual loan."
+      ]
+    },
+    {
+      "slug": "eu-bank-assets-capital-ecb-november-2026",
+      "title": "EU bank assets approach €35 trillion in latest ECB figures",
+      "eventDate": "2026-11-06",
+      "category": "Banking supervision",
+      "source": "https://www.banque-france.fr/en/press-release/ecb-publishes-consolidated-banking-data-end-june-2026",
+      "sourceName": "ECB consolidated banking data, released 6 November 2026",
+      "summary": "The ECB reports €34.99 trillion of EU banks’ assets and a 16.43% CET1 ratio in its end-June dataset.",
+      "paragraphs": [
+        "On 6 November the ECB released consolidated banking figures for the end of June 2026. Total assets held by credit institutions headquartered in the European Union reached €34.99 trillion, an increase of 5.18% from €33.27 trillion a year earlier. These are aggregated balance-sheet data, not a forecast for any individual bank.",
+        "The release also reports an aggregate non-performing loans ratio of 1.99% and a Common Equity Tier 1 capital ratio of 16.43%. Its return-on-equity figure was 5.31% for the first six months of 2026 and should not be read as an annualised rate.",
+        "For people comparing bank accounts, system-wide assets and capital ratios help explain financial-sector conditions, but cannot substitute for checking the specific institution, applicable deposit-guarantee arrangement, contractual account conditions and fees.",
+        "Our reading: the data are a useful background measure of EU banking resilience. They do not show that one retail account is safer or better priced than another. Use bank-level information and the official account tariff when making a practical choice."
+      ]
+    },
+    {
+      "slug": "eba-internal-governance-guidelines-november-2026",
+      "title": "EBA updates bank governance guidelines with a focus on proportionality",
+      "eventDate": "2026-11-05",
+      "category": "Banking regulation",
+      "source": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-publishes-revised-guidelines-internal-governance-delivering-greater-proportionality-and",
+      "sourceName": "European Banking Authority, press release of 5 November 2026",
+      "summary": "Revised governance guidance addresses roles, internal controls and proportionality under CRD VI.",
+      "paragraphs": [
+        "The European Banking Authority published revised Guidelines on internal governance on 5 November 2026. The update takes account of changes made by CRD VI and seeks to simplify parts of the supervisory framework while maintaining safeguards for sound bank management.",
+        "The guidance addresses the mapping of responsibilities for management bodies and key function holders, organisational arrangements, conflicts of interest and internal control functions. The revised text also covers governance considerations for third-country branches.",
+        "These are governance and supervisory standards. Their publication does not itself amend the price of a current account, create a new deposit product, or change a published retail welcome-bonus deadline.",
+        "Our view: stronger, more clearly assigned governance responsibilities can be relevant to how banks control operational risks. Retail customers should still judge the particular banking service using its current contractual terms and availability."
+      ]
+    },
+    {
+      "slug": "euro-area-household-deposit-rates-september-2026",
+      "title": "New euro-area household term deposits averaged 2.37% in September",
+      "eventDate": "2026-11-02",
+      "category": "Savings rates",
+      "source": "https://www.ecb.europa.eu/press/stats/mfi/html/ecb.mir2611~2502265512.en.html",
+      "sourceName": "ECB euro-area bank interest-rate statistics, released 2 November 2026",
+      "summary": "ECB statistics show new household term-deposit rates rising, while overnight deposit rates remain low.",
+      "paragraphs": [
+        "The ECB released its September 2026 bank interest-rate statistics on 2 November. The composite rate for new household deposits with an agreed maturity increased by 19 basis points to 2.37%, while the rate for household overnight deposits was broadly unchanged at 0.30%.",
+        "For new household deposits with a maturity of up to one year, the reported rate increased by 20 basis points to 2.33%. The corporate equivalent for new deposits with an agreed maturity rose to 2.48%, demonstrating that pricing differs across deposit types and customer groups.",
+        "These are weighted euro-area aggregates, not the interest rate offered by every bank. A promotional deposit may pay more and impose a maximum balance, a new-customer condition or an early-withdrawal rule.",
+        "Our view: compare annualised rates alongside the term, minimum and maximum balances, fees, tax treatment and consequences of early withdrawal. The headline interest rate alone is not a complete savings-account comparison."
       ]
     }
   ]

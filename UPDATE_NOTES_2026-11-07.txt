@@ -1,0 +1,58 @@
+BANKRANKING.EU — UPDATE 2026-11-07
+
+CHANGES
+- Added Unicaja Banco to /es/banking/ personal-account ranking: €0 account and standard debit card, 2.55% TAE up to €50,000, eligible rewards up to €570 (€450 salary/pension + €120 Bizum cashback). Bank source: https://www.unicajabanco.es/es/cuenta-online
+- Switched home-page HOT OFFER in EN/PL/IT/ES to Unicaja, preserving the original visual component.
+- Added three sourced November 2026 stories (ECB banking data, EBA governance, ECB deposit interest rates), refreshed news archive and multilingual homepage panels.
+- Replaced generic Savings entries with specific verified products in 17 cases: es/savings/BBVA, es/savings/CaixaBank, es/savings/ING España, es/child_savings/Banco Sabadell, es/child_savings/Bankinter, es/savings/Banco Santander, pl/deposits/Erste Bank Polska, pl/deposits/ING Bank Śląski, pl/deposits/Alior Bank, pl/business_savings/PKO Bank Polski, pl/business_savings/Erste Bank Polska, pl/business_savings/ING Bank Śląski, it/savings/Intesa Sanpaolo, it/child_savings/Intesa Sanpaolo, it/child_savings/BPER Banca, it/child_savings/Banco BPM, it/deposits/Crédit Agricole Italia.
+- Removed the generic Intesa Sanpaolo fixed-term deposit listing: Intesa's official explanation says it does not offer conventional deposit accounts. See https://www.intesasanpaolo.com/it/persone-e-famiglie/bisogni/famiglia/conti/conto-corrente-cos-e-come-sceglierlo.html
+- Marked 40 remaining unverified product-directory listings clearly as requiring bank-specific tariffs. They have NOT been filled with invented €0 amounts.
+- Existing banking products, other promotional links, and other site sections preserved.
+- Removed stale .git metadata from distributable ZIP to prevent GitHub Desktop merge conflicts.
+
+PENDING CONFIRMATION OF SPECIFIC TARIFFS:
+- pl/business_savings: Bank Pekao
+- pl/business_savings: mBank
+- pl/child_savings: Erste Bank Polska
+- it/savings: UniCredit
+- it/savings: BPER Banca
+- it/savings: Banco BPM
+- it/savings: Crédit Agricole Italia
+- it/savings: BNL BNP Paribas
+- it/deposits: UniCredit
+- it/deposits: BPER Banca
+- it/deposits: Banco BPM
+- it/deposits: BNL BNP Paribas
+- it/deposits: Banca Progetto
+- it/deposits: Cherry Bank
+- it/business_savings: Intesa Sanpaolo
+- it/business_savings: UniCredit
+- it/business_savings: BPER Banca
+- it/business_savings: Banco BPM
+- it/business_savings: Banca Monte dei Paschi di Siena
+- it/business_savings: Crédit Agricole Italia
+- it/business_savings: BNL BNP Paribas
+- it/business_savings: Banca Sella
+- it/child_savings: Crédit Agricole Italia
+- it/child_savings: Fineco
+- es/deposits: Banco Santander
+- es/deposits: BBVA
+- es/deposits: CaixaBank
+- es/deposits: Banco Sabadell
+- es/deposits: Bankinter
+- es/deposits: Unicaja Banco
+- es/deposits: ABANCA
+- es/business_savings: Banco Santander
+- es/business_savings: BBVA
+- es/business_savings: CaixaBank
+- es/business_savings: Banco Sabadell
+- es/business_savings: Bankinter
+- es/business_savings: Unicaja Banco
+- es/business_savings: ABANCA
+- es/business_savings: Santander España
+- es/child_savings: Unicaja Banco
+
+ADDITIONAL VERIFIED ENTRIES
+- es/savings: Santander Cuenta Hucha — €0 / 0% TAE.
+- pl/business_savings: Erste Lokata Biznes na Start — min. 1,000 PLN / 4.5% (bank published terms).
+- pl/business_savings: ING OKO business promotion — 3 months / 5.5% subject to terms.
