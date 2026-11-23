@@ -1,0 +1,19 @@
+BANKRANKING.EU — BANKING NEWS ONLY — 23 NOVEMBER 2026
+
+Base version: bankranking.eu-premie-przy-kazdym-banku-2026-11-16.zip
+Updated: ONLY Banking News (homepage sections EN/PL/ES/IT, /news/ archive,
+5 new articles, article metadata, news builder and sitemap).
+
+Added 5 sourced stories:
+- 19 Nov: ECB 2027–2029 supervision priorities
+- 19 Nov: EBA Autumn 2026 EU banking risks
+- 18 Nov: ECB November 2026 Financial Stability Review
+- 16 Nov: EU Commission merger approval: UniCredit–Commerzbank
+- 18 Nov: EBA third-country bank subsidiaries and asset share
+
+HOT OFFER: unchanged — Unicaja on every language homepage.
+Rankings, banking products, fees, links, card labels, languages,
+filters, navigation and styles: unchanged.
+
+All news: 26 stories (previously 21).
+Sources: linked in each /news/ article and in assets/data/news.json.

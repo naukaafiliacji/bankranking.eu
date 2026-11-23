@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-11-07",
+  "preparedAt": "2026-11-23",
   "articles": [
     {
       "slug": "eba-taxonomy-disclosures-july-2026",
@@ -314,6 +314,81 @@
         "For new household deposits with a maturity of up to one year, the reported rate increased by 20 basis points to 2.33%. The corporate equivalent for new deposits with an agreed maturity rose to 2.48%, demonstrating that pricing differs across deposit types and customer groups.",
         "These are weighted euro-area aggregates, not the interest rate offered by every bank. A promotional deposit may pay more and impose a maximum balance, a new-customer condition or an early-withdrawal rule.",
         "Our view: compare annualised rates alongside the term, minimum and maximum balances, fees, tax treatment and consequences of early withdrawal. The headline interest rate alone is not a complete savings-account comparison."
+      ]
+    },
+    {
+      "slug": "ecb-capital-requirements-supervision-2027",
+      "title": "ECB sets its banking supervision priorities for 2027–29",
+      "eventDate": "2026-11-19",
+      "category": "Banking supervision",
+      "source": "https://www.bankingsupervision.europa.eu/press/pr/date/2026/html/ssm.pr261119~4cb883c88e.ga.html",
+      "sourceName": "ECB Banking Supervision SREP press release, 19 November 2026",
+      "summary": "Capital guidance remains broadly steady, while supervisors focus on cyber risk and AI.",
+      "paragraphs": [
+        "On 19 November 2026, ECB Banking Supervision published its annual Supervisory Review and Evaluation Process (SREP) results and supervisory priorities for 2027–2029. The exercise covered 108 banks directly supervised by the ECB.",
+        "The combined Common Equity Tier 1 requirement and guidance for 2027 was broadly unchanged at 11.3% of risk-weighted assets, versus 11.2% for 2026. The ECB reported that the banks remained generally well capitalised and liquid, but identified operational and technology risks as areas requiring closer supervision.",
+        "The priorities focus on resilience to geopolitical and macro-financial shocks, cyber threats, reliance on third-party providers and the risks associated with banks’ use of AI. This does not mean an immediate change to a customer’s current account fee or the interest on a savings deposit.",
+        "For customers, the practical questions remain whether their bank provides reliable digital services, clear information about complaints and product fees, and robust security. Supervisory capital requirements are a bank-level safeguard, not a personal savings rate or a guarantee that every service disruption can be prevented."
+      ]
+    },
+    {
+      "slug": "eba-eu-banking-risk-assessment-november-2026",
+      "title": "EBA says EU banks are resilient but warns of cyber and credit risks",
+      "eventDate": "2026-11-19",
+      "category": "Banking risks",
+      "source": "https://www.eba.europa.eu/publications-and-media/press-releases/eueea-banks-continue-display-resilience-amid-sovereign-debt-pressures-borrower-vulnerabilities-and",
+      "sourceName": "EBA Autumn Risk Assessment Report announcement, 19 November 2026",
+      "summary": "Strong capital and liquidity coexist with cyber threats and borrower vulnerabilities.",
+      "paragraphs": [
+        "The European Banking Authority published its Autumn 2026 Risk Assessment Report on 19 November. It found that EU and EEA banks remained well capitalised, liquid and profitable, and that lending to the economy continued to expand.",
+        "The EBA also highlighted cyber threats, fraud, dependencies on technology suppliers, and vulnerabilities among some borrowers. It noted that banks are using more advanced AI models to improve productivity, while introducing new operational and governance challenges.",
+        "For a retail banking customer, sector-wide resilience should not be read as a promise that a particular bank will never change fees or experience an outage. Individual deposit protection and the product contract are separate from the risk assessment.",
+        "When comparing accounts, check deposit guarantee coverage, verified maintenance and card fees, how the bank responds to fraud, and whether access to cash and payments meets your needs. The report is a useful industry-wide snapshot rather than a rating of individual savings products."
+      ]
+    },
+    {
+      "slug": "ecb-financial-stability-review-ai-november-2026",
+      "title": "ECB warns AI valuations and fiscal risks cloud financial stability",
+      "eventDate": "2026-11-18",
+      "category": "Financial stability",
+      "source": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261118~83c5c60158.en.html",
+      "sourceName": "ECB Financial Stability Review press release, 18 November 2026",
+      "summary": "The ECB sees elevated risks even as euro area banks retain substantial buffers.",
+      "paragraphs": [
+        "On 18 November 2026, the European Central Bank published its latest Financial Stability Review. The review identified stretched expectations for some AI-related valuations, sovereign fiscal pressures and geopolitical uncertainty as major risks to financial markets.",
+        "According to the ECB, euro area banks entered this period with strong profitability, capital and liquidity. Nevertheless, a sharp market repricing or a macroeconomic shock could still transmit stress through banks and non-bank financial institutions.",
+        "The warning does not forecast a collapse in banking services or imply that all savings products are equally risky. It examines interconnected financial markets, which is a broader question than whether a current account has a monthly maintenance fee.",
+        "For savers, the useful response is to distinguish deposits from investments, understand the legal protection applying to each, and look beyond promotional interest rates. Risk assessments should inform questions, not encourage decisions based on alarming headlines alone."
+      ]
+    },
+    {
+      "slug": "eu-clears-unicredit-commerzbank-acquisition-november-2026",
+      "title": "EU clears UniCredit’s proposed takeover of Commerzbank",
+      "eventDate": "2026-11-16",
+      "category": "Bank consolidation",
+      "source": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_26_2440/IP_26_2440_EN.pdf",
+      "sourceName": "European Commission merger approval announcement, 16 November 2026",
+      "summary": "The Commission grants merger clearance; that does not itself complete the transaction.",
+      "paragraphs": [
+        "The European Commission announced on 16 November 2026 that it had unconditionally cleared UniCredit’s proposed acquisition of Commerzbank under the EU Merger Regulation. The Commission concluded that the transaction would not raise competition concerns in the European Economic Area.",
+        "In reviewing the German market, the Commission examined overlaps between Commerzbank and UniCredit’s German business, including HypoVereinsbank. It found that customers would retain alternatives across the main retail and corporate banking services.",
+        "Merger clearance is a regulatory milestone, not proof that the proposed acquisition has already closed or that customers’ account terms have changed. Further corporate and other regulatory steps may still matter.",
+        "Account holders should follow official bank communications about any eventual operational integration and contractual changes. A merger headline by itself is not a reason to assume that a current account has been discontinued or that a deposit guarantee arrangement has immediately changed."
+      ]
+    },
+    {
+      "slug": "eba-non-eu-banks-market-share-november-2026",
+      "title": "Non-EU banking groups hold a growing share of EU bank assets",
+      "eventDate": "2026-11-18",
+      "category": "European banking",
+      "source": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-reports-growing-market-share-third-country-bank-subsidiaries-eu-and-reduced-foreign-currency",
+      "sourceName": "EBA report on non-EU banking groups, 18 November 2026",
+      "summary": "EBA says third-country subsidiaries accounted for 10.22% of EU bank assets in 2025.",
+      "paragraphs": [
+        "On 18 November 2026, the European Banking Authority published updated analyses of subsidiaries of banking groups headquartered outside the EU and of EU banks’ foreign-currency assets and liabilities.",
+        "It reported that non-EU banking group subsidiaries accounted for 10.22% of total EU banking assets at the end of 2025, compared with 9.8% a year earlier. The EBA also noted that foreign-currency funding represented 25.3% of EU bank funding, up from 24.8% at the end of 2024.",
+        "These figures describe the structure and funding of the wider banking system. They do not directly measure the quality of an individual current account, and a foreign-owned bank is not automatically a less secure option.",
+        "When comparing banks across Europe, consider which legal entity actually holds the deposit, the deposit guarantee scheme applicable to it, and the account’s current fees. The banking group’s country of origin is not a substitute for those checks."
       ]
     }
   ]
